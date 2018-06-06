@@ -1,0 +1,21 @@
+{
+    "development": {
+        "driver": "mysql",
+        "user": "root",
+        "password": "",
+        "host": "localhost",
+        "port": 3306,
+        "database": "qldg",
+        "multipleStatements": true
+    },
+    "production": {
+        "driver": "mysql",
+        "user": "root",
+        "password": "",
+        "host": "localhost",
+        "port": 3306,
+        "database": "qldg",
+        "multipleStatements": true
+    }
+}
+  
