@@ -136,3 +136,20 @@ INSERT INTO blacklists (`product_id`,`user_id`) VALUES (13, 6);
 INSERT INTO blacklists (`product_id`,`user_id`) VALUES (14, 5);
 INSERT INTO blacklists (`product_id`,`user_id`) VALUES (15, 8);
 
+-- rate:<1: good 2: normal 3: bad
+INSERT INTO winners (`product_id`,`user_id`,`seller_id`,`rate`,`comment`) VALUES (1,5,1,1,'good' );
+INSERT INTO winners (`product_id`,`user_id`,`seller_id`,`rate`,`comment`) VALUES (2,6,1,2,'normal');
+INSERT INTO winners (`product_id`,`user_id`,`seller_id`,`rate`,`comment`) VALUES (3,8,1,3,'bad');
+INSERT INTO winners (`product_id`,`user_id`,`seller_id`,`rate`,`comment`) VALUES (4,7,1,1,'good' );
+INSERT INTO winners (`product_id`,`user_id`,`seller_id`,`rate`,`comment`) VALUES (5, 5,1,2,'normal');
+INSERT INTO winners (`product_id`,`user_id`,`seller_id`,`rate`,`comment`) VALUES (6, 6,1,1,'good');
+INSERT INTO winners (`product_id`,`user_id`,`seller_id`,`rate`,`comment`) VALUES (7, 7,1,1,'good');
+INSERT INTO winners (`product_id`,`user_id`,`seller_id`,`rate`,`comment`) VALUES (8,8 ,1,1,'good');
+INSERT INTO winners (`product_id`,`user_id`,`seller_id`,`rate`,`comment`) VALUES (9, 5,1,3,'bad');
+INSERT INTO winners (`product_id`,`user_id`,`seller_id`,`rate`,`comment`) VALUES (10,6,1,2,'normal' );
+INSERT INTO winners (`product_id`,`user_id`,`seller_id`,`rate`,`comment`) VALUES (11,7,1,1,'good' );
+INSERT INTO winners (`product_id`,`user_id`,`seller_id`,`rate`,`comment`) VALUES (12,8,1,3,'bad' );
+INSERT INTO winners (`product_id`,`user_id`,`seller_id`,`rate`,`comment`) VALUES (13, 6,1,1,'good');
+INSERT INTO winners (`product_id`,`user_id`,`seller_id`,`rate`,`comment`) VALUES (14, 5,1,2,'normal');
+INSERT INTO winners (`product_id`,`user_id`,`seller_id`,`rate`,`comment`) VALUES (15, 8,1,3,'bad');
+
