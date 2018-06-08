@@ -4,6 +4,10 @@ const productController = require('../../controllers/productController')
 const userController = require('../../controllers/userController')
 const blacklistController = require('../../controllers/blacklistController')
 const imageController = require('../../controllers/imageController')
+const bidlogController = require('../../controllers/imageController')
+const favoriteController = require('../../controllers/imageController')
+const winnerController = require('../../controllers/imageController')
+const auctionController = require('../../controllers/imageController')
 const router = express.Router()
 
 /* Catalog. */
