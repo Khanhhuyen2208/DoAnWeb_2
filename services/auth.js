@@ -1,13 +1,13 @@
-const jwt = require('jsonwebtoken')
+const jwt = {}
 const cert = 'ZG9hbmx0d2ViMi1qc29uLXdlYi10b2tlbg=='
 
 /**
  * Create new jwt token
  * @param {Object} payload
  */
-function sign(payload) {
-  return new Promise(function(resolve, reject) {
-    jwt.sign(payload, cert, { expiresIn: '2h' }, function(err, token) {
+function sign (payload) {
+  return new Promise(function (resolve, reject) {
+    jwt.sign(payload, cert, { expiresIn: '2h' }, function (err, token) {
       if (err) {
         reject
       }
@@ -20,9 +20,9 @@ function sign(payload) {
  * Verify jwt token
  * @param {String} token
  */
-function verify(token) {
-  return new Promise(function(resolve, reject) {
-    jwt.verify(token, cert, function(err, decoded) {
+function verify (token) {
+  return new Promise(function (resolve, reject) {
+    jwt.verify(token, cert, function (err, decoded) {
       if (err) {
         reject(err)
       }
@@ -37,7 +37,7 @@ function verify(token) {
  * @param {Response} res
  * @param {Function} next
  */
-async function jwtMiddleware(req, res, next) {
+async function jwtMiddleware (req, res, next) {
   if (req.method === 'GET') {
     return next()
   }
