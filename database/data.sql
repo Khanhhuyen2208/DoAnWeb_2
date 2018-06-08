@@ -153,3 +153,18 @@ INSERT INTO winners (`product_id`,`user_id`,`seller_id`,`rate`,`comment`) VALUES
 INSERT INTO winners (`product_id`,`user_id`,`seller_id`,`rate`,`comment`) VALUES (14, 5,1,2,'normal');
 INSERT INTO winners (`product_id`,`user_id`,`seller_id`,`rate`,`comment`) VALUES (15, 8,1,3,'bad');
 
+INSERT INTO bidlogs (`product_id`,`buyer_id`,`price`) VALUES (1,2,3000000);
+INSERT INTO bidlogs (`product_id`,`buyer_id`,`price`) VALUES (2,2,5000000);
+INSERT INTO bidlogs (`product_id`,`buyer_id`,`price`) VALUES (3,2,6000000);
+INSERT INTO bidlogs (`product_id`,`buyer_id`,`price`) VALUES (4,2,6000000);
+INSERT INTO bidlogs (`product_id`,`buyer_id`,`price`) VALUES (5,2,8000000);
+INSERT INTO bidlogs (`product_id`,`buyer_id`,`price`) VALUES (6,2,10000000);
+INSERT INTO bidlogs (`product_id`,`buyer_id`,`price`) VALUES (7,2,6000000);
+INSERT INTO bidlogs (`product_id`,`buyer_id`,`price`) VALUES (8,2,8000000);
+INSERT INTO bidlogs (`product_id`,`buyer_id`,`price`) VALUES (9,2,10000000);
+INSERT INTO bidlogs (`product_id`,`buyer_id`,`price`) VALUES (10,2,10000000);
+INSERT INTO bidlogs (`product_id`,`buyer_id`,`price`) VALUES (11,2,40000000);
+INSERT INTO bidlogs (`product_id`,`buyer_id`,`price`) VALUES (12,2,10000000);
+INSERT INTO bidlogs (`product_id`,`buyer_id`,`price`) VALUES (13,2,10000000);
+INSERT INTO bidlogs (`product_id`,`buyer_id`,`price`) VALUES (14,2,40000000);
+INSERT INTO bidlogs (`product_id`,`buyer_id`,`price`) VALUES (15,2,10000000);
