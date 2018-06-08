@@ -7,7 +7,6 @@ const { jwtMiddleware } = require('./services/auth')
 const indexRouter = require('./routes')
 const apiRouter = require('./routes/api')
 const authRouter = require('./routes/auth')
-
 const app = express()
 
 app.use(logger('dev'))
