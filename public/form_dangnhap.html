@@ -2,19 +2,25 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="css/style2.css"/>
+<link rel="stylesheet" type="text/css" href="css/style_2.css"/>
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+<script type="text/javascript" src="JS/libs_1.js"></script>
 <title>MAN HINH DANG NHAP</title>
 </head>
-
 
 <body>
 	<div class="khung">
     	<i class="fa fa-user-circle"></i>
         <form>
-        	<input type="text" placeholder="Đăng Nhập"/><br />
-            <input type="password" placeholder="Mật Khẩu"/><br /> 
-            <button>ĐĂNG NHẬP</button>
+        	 <div class="row">
+        		<input type="text" placeholder="Đăng Nhập" id="ten_dang_nhap"  />
+             </div>
+             <div class="row">
+            	<input type="password" placeholder="Mật Khẩu" id="mat_khau" />
+             </div>
+             <div class="row">
+            	<input type="button" value="Đăng Nhập" id="btn_dang_nhap" onclick="kiem_tra_dang_nhap()"  />
+             </div>
         </form>
 	</div>
 </body>

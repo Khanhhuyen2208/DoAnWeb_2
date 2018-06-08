@@ -2,7 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="css/style3.css"/>
+<link rel="stylesheet" type="text/css" href="css/style_3.css"/>
+<script type="text/javascript" src="JS/libs_2.js"></script>
 <title>MAN HINH DANG KI</title>
 </head>
 
@@ -10,48 +11,51 @@
 	<div class="khung">
     	<h1>ĐĂNG KÍ TÀI KHOẢN</h1>
     	<div class="col-3">
-        	<input type="text" placeholder="Họ"/>
+        	<input type="text" placeholder="Họ" id="ho"/>
         </div>
         <div class="col-3">
-        	<input type="text" placeholder="Tên" />
+        	<input type="text" placeholder="Tên" id="ten" />
         </div>
         <div style="clear:both"></div>
         <div class="row">
-        	<input type="text" placeholder="Tên đăng nhập" />
+        	<input type="text" placeholder="Tên đăng nhập" id="ten_dang_nhap" />
         </div>
         <div class="row">
-        	<input type="password" placeholder="Mật khẩu" />
+        	<input type="password" placeholder="Mật khẩu" id="mat_khau"/>
         </div>
         <div class="row">
-        	<input type="password" placeholder="Xác nhận mật khẩu" />
+        	<input type="password" placeholder="Xác nhận mật khẩu" id="xn_mat_khau" />
         </div>
         <div class="row">
-        	<input type="date" />
+        	<input type="date" id="ngay_sinh"/>
         </div>
         <div class="row">
-        	<input type="radio" name="gioi_tinh" />
+        	<input type="radio" name="gioi_tinh" id="nam" checked="checked"/>
             <label>Nam</label>
-            <input type="radio"  name="gioi_tinh"/>
+            <input type="radio"  name="gioi_tinh" id="nu"/>
             <label>Nữ</label>
         </div>
         <div class="row">
-        	<input type="number" placeholder="Điện thoại" />     
+        	<input type="number" placeholder="Điện thoại" id="dien_thoai" />     
         </div>
         <div class="row">
-        	<input type="email" placeholder="Địa chỉ Email"/>
+        	<input type="email" placeholder="Email" id="email"/>
+        </div>
+        <div class="row">
+        	<input type="address" placeholder="Địa Chỉ" id="dia_chi"/>
         </div>
         <br />
         <div class="row">
         	<select>
             	<option value="">Việt Nam</option>
-                <option>Singapo</option>
+                <option>Singapore</option>
                 <option>Thái Lan</option>
                 <option>Nhật Bản</option>
                 <option>Hàn Quốc</option>
             </select>
         </div>
         <div class="row">
-        	<button id="btn_dang_ki">ĐĂNG KÍ</button>
+        	<button id="btn_dang_ki" onclick="kiem_tra()">ĐĂNG KÍ</button>
         </div>
     </div>
 </body>
