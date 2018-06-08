@@ -86,3 +86,53 @@ INSERT INTO images(`product_id`,`image_link`) VALUES (12,'http://www.kimhengcent
 INSERT INTO images(`product_id`,`image_link`) VALUES (13,'https://cdn3.tgdd.vn/Products/Images/522/101993/ipad-mini-4-wifi-128gb-321-400x400.jpg');
 INSERT INTO images(`product_id`,`image_link`) VALUES (14,'http://d2pa5gi5n2e1an.cloudfront.net/global/images/product/tablets/ASUS_MeMO_Pad/ASUS_MeMO_Pad_L_1.jpg');
 INSERT INTO images(`product_id`,`image_link`) VALUES (15,'https://www.naijatechguide.com/wp-content/uploads/2017/07/huawei-mediapad-m3-featured.jpg');
+
+
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (1,5 );
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (2,6);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (3,8);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (4,7 );
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (5, 5);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (6, 6);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (7, 7);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (8,8 );
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (9, 5);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (10,6 );
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (11,7 );
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (12,8 );
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (13, 6);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (14, 5);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (15, 8);
+
+INSERT INTO favorites (`product_id`,`user_id`) VALUES (1,5 );
+INSERT INTO favorites (`product_id`,`user_id`) VALUES (2,6);
+INSERT INTO favorites (`product_id`,`user_id`) VALUES (3,8);
+INSERT INTO favorites (`product_id`,`user_id`) VALUES (4,7 );
+INSERT INTO favorites (`product_id`,`user_id`) VALUES (5, 5);
+INSERT INTO favorites (`product_id`,`user_id`) VALUES (6, 6);
+INSERT INTO favorites (`product_id`,`user_id`) VALUES (7, 7);
+INSERT INTO favorites (`product_id`,`user_id`) VALUES (8,8 );
+INSERT INTO favorites (`product_id`,`user_id`) VALUES (9, 5);
+INSERT INTO favorites (`product_id`,`user_id`) VALUES (10,6 );
+INSERT INTO favorites (`product_id`,`user_id`) VALUES (11,7 );
+INSERT INTO favorites (`product_id`,`user_id`) VALUES (12,8 );
+INSERT INTO favorites (`product_id`,`user_id`) VALUES (13, 6);
+INSERT INTO favorites (`product_id`,`user_id`) VALUES (14, 5);
+INSERT INTO favorites (`product_id`,`user_id`) VALUES (15, 8);
+
+INSERT INTO blacklists (`product_id`,`user_id`) VALUES (1,5 );
+INSERT INTO blacklists (`product_id`,`user_id`) VALUES (2,6);
+INSERT INTO blacklists (`product_id`,`user_id`) VALUES (3,8);
+INSERT INTO blacklists (`product_id`,`user_id`) VALUES (4,7 );
+INSERT INTO blacklists (`product_id`,`user_id`) VALUES (5, 5);
+INSERT INTO blacklists (`product_id`,`user_id`) VALUES (6, 6);
+INSERT INTO blacklists (`product_id`,`user_id`) VALUES (7, 7);
+INSERT INTO blacklists (`product_id`,`user_id`) VALUES (8,8 );
+INSERT INTO blacklists (`product_id`,`user_id`) VALUES (9, 5);
+INSERT INTO blacklists (`product_id`,`user_id`) VALUES (10,6 );
+INSERT INTO blacklists (`product_id`,`user_id`) VALUES (11,7 );
+INSERT INTO blacklists (`product_id`,`user_id`) VALUES (12,8 );
+INSERT INTO blacklists (`product_id`,`user_id`) VALUES (13, 6);
+INSERT INTO blacklists (`product_id`,`user_id`) VALUES (14, 5);
+INSERT INTO blacklists (`product_id`,`user_id`) VALUES (15, 8);
+
