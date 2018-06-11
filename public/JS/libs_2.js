@@ -34,8 +34,42 @@ function kiem_tra () {
     dien_thoai == '' ||
     email == '' ||
     dia_chi == ''
-  ) { alert('Kiểm tra thông tin đăng kí') } else if (mat_khau != xn_mat_khau) alert('Xác nhận mật khẩu không đúng')
+  ) {
+    alert('Kiểm tra thông tin đăng kí')
+  } else if (mat_khau != xn_mat_khau) alert('Xác nhận mật khẩu không đúng')
   else if (nam == false && nu == false) alert('Chọn giới tính')
   else if (ngay_sinh > ngay_hien_hanh) alert('Ngày sinh không hợp lệ')
   else alert('Đăng kí thành công')
+
+  // Thêm captcha  phần đăng kí
+
+  var body = {
+    Caphe_response: grecaptcha.getResponse()
+  }
+  console.log(body)
+  $.ajax({
+    url: '/api/abcxyz',
+    method: 'POST',
+    data: body,
+    success: function (res) {
+      console.log('ahihi')
+    }
+  })
 }
+
+// Thêm captcha  phần đăng kí
+
+$('btn_dang_ki').on('click', function () {
+  var body = {
+    Captche_response: grecaptcha.getResponse()
+  }
+  console.log(body)
+  $.ajax({
+    url: '/api/abcxyz',
+    method: 'POST',
+    data: body,
+    success: function (res) {
+      console.log('ahihi')
+    }
+  })
+})

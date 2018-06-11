@@ -4,6 +4,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="css/style_3.css"/>
 <script type="text/javascript" src="JS/libs_2.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
 <title>MAN HINH DANG KI</title>
 </head>
 
@@ -54,9 +59,15 @@
                 <option>Hàn Quốc</option>
             </select>
         </div>
+        <!-- Thêm capche -->
+        <div class="row">
+        	<div style="margin-left: 120px" class="g-recaptcha" data-sitekey="6LfcYl4UAAAAACT1w6PDGXOsC5N9o5vqCFnmh1yY"></div>
+        </div><br><br>
         <div class="row">
         	<button id="btn_dang_ki" onclick="kiem_tra()">ĐĂNG KÍ</button>
         </div>
     </div>
 </body>
 </html>
+
+
