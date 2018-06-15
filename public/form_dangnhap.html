@@ -4,8 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="css/style_2.css"/>
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
-<script src='https://www.google.com/recaptcha/api.js'></script>
 <script type="text/javascript" src="JS/libs_1.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
 <script
   src="https://code.jquery.com/jquery-2.2.4.min.js"
   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
@@ -23,17 +23,36 @@
              <div class="row">
             	<input type="password" placeholder="Mật Khẩu" id="mat_khau" />
              </div>
-              <!-- Thêm capche cho form đăng nhập -->
-
-             <div  style="margin-left: 120px" class="g-recaptcha" data-sitekey="6LfcYl4UAAAAACT1w6PDGXOsC5N9o5vqCFnmh1yY"></div> <br>
-
              <div class="row">
-            	<input type="button" value="Đăng Nhập" id="btn_dang_nhap" onclick="kiem_tra_dang_nhap()"  />
+                <div style="margin-left: 120px" data-callback="recaptchaCallback" 
+                class="g-recaptcha" data-sitekey="6LfcYl4UAAAAACT1w6PDGXOsC5N9o5vqCFnmh1yY"></div>
+            </div>
+             <div class="row">
+                <input type="button" value="Đăng Nhập" id="btn_dang_nhap" 
+                disabled 
+                onclick="kiem_tra_dang_nhap()"  
+                />
              </div>
-            
-             
         </form>
 	</div>
-</body>
-</html>
+</body> 
+<script>
+    // $(function(){
+    //     $('#btn_dang_nhap').on('click', function(){
+    //         $.ajax({
+    //             url: '/auth/login',
+    //             data:{
+    //                 email:$('#ten_dang_nhap').val(),
+    //                 password:$('#mat_khau').val()
+    //             }
+    //         }).done(function(response){
+    //             console.log('ok')
+    //         })
+    //     })
+    // })
 
+    function recaptchaCallback() {
+    $('#btn_dang_nhap').removeAttr('disabled');
+};
+</script>
+</html>

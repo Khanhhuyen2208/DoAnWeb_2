@@ -9,11 +9,13 @@ function kiem_tra_dang_nhap () {
 
   // Thêm captcha cho đăng nhập
   var body = {
-    Caphe_response: grecaptcha.getResponse()
+    captchaResponse: grecaptcha.getResponse(),
+    email: ten_dang_nhap,
+    password: mat_khau
   }
   console.log(body)
   $.ajax({
-    url: '/api/abcxyz',
+    url: '/auth/login',
     method: 'POST',
     data: body,
     success: function (res) {
@@ -22,17 +24,17 @@ function kiem_tra_dang_nhap () {
   })
 }
 // Thêm captcha cho đăng nhập
-$('btn_dang_nhap').on('click', function () {
-  var body = {
-    Captche_response: grecaptcha.getResponse()
-  }
-  console.log(body)
-  $.ajax({
-    url: '/api/abcxyz',
-    method: 'POST',
-    data: body,
-    success: function (res) {
-      console.log('ahihi')
-    }
-  })
-})
+// $('#btn_dang_nhap').on('click', function () {
+//   var body = {
+//     Captche_response: grecaptcha.getResponse()
+//   }
+//   console.log(body)
+//   $.ajax({
+//     url: '/api/abcxyz',
+//     method: 'POST',
+//     data: body,
+//     success: function (res) {
+//       console.log('ahihi')
+//     }
+//   })
+// })
