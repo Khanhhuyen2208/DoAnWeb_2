@@ -1,6 +1,6 @@
 // JavaScript Document
 function kiem_tra () {
-  var ho,
+  let ho,
     ten,
     ten_dang_nhap,
     mat_khau,
@@ -44,32 +44,32 @@ function kiem_tra () {
   // Thêm captcha  phần đăng kí
 
   var body = {
-    Caphe_response: grecaptcha.getResponse()
+    captchaResponse: grecaptcha.getResponse()
   }
-  console.log(body)
+
   $.ajax({
-    url: '/api/abcxyz',
+    url: '/auth/register',
     method: 'POST',
     data: body,
     success: function (res) {
-      console.log('ahihi')
+      console.log(res)
     }
   })
 }
 
 // Thêm captcha  phần đăng kí
-
-$('btn_dang_ki').on('click', function () {
-  var body = {
-    Captche_response: grecaptcha.getResponse()
-  }
-  console.log(body)
-  $.ajax({
-    url: '/api/abcxyz',
-    method: 'POST',
-    data: body,
-    success: function (res) {
-      console.log('ahihi')
-    }
-  })
-})
+//
+// $('btn_dang_ki').on('click', function () {
+//   var body = {
+//     Captche_response: grecaptcha.getResponse()
+//   }
+//   console.log(body)
+//   $.ajax({
+//     url: '/api/abcxyz',
+//     method: 'POST',
+//     data: body,
+//     success: function (res) {
+//       console.log('ahihi')
+//     }
+//   })
+// })
