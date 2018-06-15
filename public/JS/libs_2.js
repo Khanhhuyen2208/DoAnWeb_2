@@ -44,7 +44,12 @@ function kiem_tra () {
   // Thêm captcha  phần đăng kí
 
   var body = {
-    captchaResponse: grecaptcha.getResponse()
+    captchaResponse: grecaptcha.getResponse(),
+    name: ho + ten,
+    email: email,
+    password: mat_khau,
+    address: dia_chi,
+    phone_number: dien_thoai
   }
 
   $.ajax({

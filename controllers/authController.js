@@ -15,20 +15,24 @@ async function login (req, res) {
   let limit = queryUtils.getQueryString({ limit: 0 })
 
   if (body.captchaResponse) {
-    let recaptchaResponse = await axios.post(
-      'https://www.google.com/recaptcha/api/siteverify',
-      {
-        secret: '6Ldu3D4UAAAAAA32pqPw9o3ysp6F-M3YGq4bxS1x',
-        response: body.captchaResponse
-      },
-      {
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
-        }
-      }
-    )
+    let data = querystring.stringify({
+      secret: '6LfcYl4UAAAAAPZWsKDq0q1W7UQeoyFqEyBgw29g',
+      response: body.captchaResponse
+    })
+
+    let headers = {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    }
+
+    let recaptchaResponse = await axios({
+      method: 'POST',
+      url: 'https://www.google.com/recaptcha/api/siteverify',
+      headers: headers,
+      data: data
+    })
 
     if (recaptchaResponse.data.success) {
+      delete body.captchaResponse
       if (body.email && body.password) {
         try {
           user = await userModel.index(limit, {
