@@ -1,4 +1,4 @@
-const winner = require('../models/winners')
+const winner = require('../models/winner')
 const queryUtils = require('../services/query')
 
 /**
@@ -9,9 +9,12 @@ const queryUtils = require('../services/query')
 async function index (req, res) {
   let winners
   let limit = queryUtils.getQueryString(req.query)
+  let body = { ...req.query }
+  delete body.page
+  delete body.limit
 
   try {
-    winners = await winner.index(limit)
+    winners = await winner.index(limit, body)
   } catch (e) {
     return res.sendStatus(500)
   }

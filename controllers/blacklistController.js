@@ -1,4 +1,4 @@
-const blacklist = require('../models/blacklists')
+const blacklist = require('../models/blacklist')
 const queryUtils = require('../services/query')
 
 /**
@@ -9,9 +9,12 @@ const queryUtils = require('../services/query')
 async function index (req, res) {
   let blacklists
   let limit = queryUtils.getQueryString(req.query)
+  let body = { ...req.query }
+  delete body.page
+  delete body.limit
 
   try {
-    blacklists = await blacklist.index(limit)
+    blacklists = await blacklist.index(limit, body)
   } catch (e) {
     return res.sendStatus(500)
   }

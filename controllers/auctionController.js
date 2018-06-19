@@ -1,4 +1,4 @@
-const auction = require('../models/auctions')
+const auction = require('../models/auction')
 const queryUtils = require('../services/query')
 
 /**
@@ -9,9 +9,12 @@ const queryUtils = require('../services/query')
 async function index (req, res) {
   let auctions
   let limit = queryUtils.getQueryString(req.query)
+  let body = { ...req.query }
+  delete body.page
+  delete body.limit
 
   try {
-    auctions = await auction.index(limit)
+    auctions = await auction.index(limit, body)
   } catch (e) {
     return res.sendStatus(500)
   }

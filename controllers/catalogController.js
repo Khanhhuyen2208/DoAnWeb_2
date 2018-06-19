@@ -6,12 +6,15 @@ const queryUtils = require('../services/query')
  * @param {Request} req
  * @param {Response} res
  */
-async function index(req, res) {
+async function index (req, res) {
   let catalogs
   let limit = queryUtils.getQueryString(req.query)
+  let body = { ...req.query }
+  delete body.page
+  delete body.limit
 
   try {
-    catalogs = await catalog.index(limit)
+    catalogs = await catalog.index(limit, body)
   } catch (e) {
     return res.sendStatus(500)
   }
@@ -24,7 +27,7 @@ async function index(req, res) {
  * @param {Request} req
  * @param {Response} res
  */
-async function show(req, res) {
+async function show (req, res) {
   let catalogs
 
   try {
@@ -41,7 +44,7 @@ async function show(req, res) {
  * @param {Request} req
  * @param {Response} res
  */
-async function store(req, res) {
+async function store (req, res) {
   let body = { ...req.body }
   let catalogs
 
@@ -59,7 +62,7 @@ async function store(req, res) {
  * @param {Request} req
  * @param {Response} res
  */
-async function update(req, res) {
+async function update (req, res) {
   let body = { ...req.body }
   let catalogs
 
@@ -77,7 +80,7 @@ async function update(req, res) {
  * @param {Request} req
  * @param {Response} res
  */
-async function deleteModel(req, res) {
+async function deleteModel (req, res) {
   let catalogs
 
   try {

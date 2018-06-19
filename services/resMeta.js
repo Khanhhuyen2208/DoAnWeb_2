@@ -1,10 +1,18 @@
 const DBManage = require('../database/DBManage')
 
-function createMetaData(tableName, pageObj, resObj) {
-  return new Promise(function(resovle, reject) {
+function createMetaData (
+  tableName,
+  pageObj,
+  resObj,
+  customWhereStatement = null
+) {
+  return new Promise(function (resovle, reject) {
     let sql = `Select count(id) as total from ${tableName}`
+    if (customWhereStatement) {
+      sql = `Select count(id) as total from ${tableName} ${customWhereStatement}`
+    }
 
-    DBManage.executeQuery(sql, function(err, data) {
+    DBManage.executeQuery(sql, function (err, data) {
       if (err) {
         console.log(err.message)
         reject(err)
@@ -15,10 +23,7 @@ function createMetaData(tableName, pageObj, resObj) {
         currentPage = pageObj.page,
         lastPage =
           Number(pageObj.limit) === 0 ? 1 : Math.ceil(total / pageObj.limit),
-        currentPageCount =
-          currentPage === lastPage
-            ? perPage - (lastPage * perPage - total)
-            : perPage
+        currentPageCount = resObj.length
 
       let meta = {
         total: total,
@@ -33,7 +38,6 @@ function createMetaData(tableName, pageObj, resObj) {
     })
   })
 }
-
 module.exports = {
   createMetaData: createMetaData
 }
