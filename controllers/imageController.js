@@ -9,9 +9,12 @@ const queryUtils = require('../services/query')
 async function index (req, res) {
   let images
   let limit = queryUtils.getQueryString(req.query)
+  let body = { ...req.query }
+  delete body.page
+  delete body.limit
 
   try {
-    images = await image.index(limit)
+    images = await image.index(limit, body)
   } catch (e) {
     return res.sendStatus(500)
   }

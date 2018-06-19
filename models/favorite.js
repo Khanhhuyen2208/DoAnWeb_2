@@ -10,16 +10,18 @@ const tableName = 'favorites'
 function index (limit = {}, input = {}) {
   // Create query string
   return new Promise(function (resolve, reject) {
+    let whereStatement = queryUtils.createWhereStatement(input)
+    let limitStatement = queryUtils.createLimitStatement(limit)
     let sql = `Select * From ${tableName} 
-      ${queryUtils.createWhereStatement(input)} 
-      ${queryUtils.createLimitStatement(limit)}`
+      ${whereStatement} 
+      ${limitStatement}`
 
     DBManage.executeQuery(sql, function (err, data) {
       if (err) {
         reject(err)
       }
 
-      let res = meta.createMetaData(tableName, limit, data)
+      let res = meta.createMetaData(tableName, limit, data, whereStatement)
       resolve(res)
     })
   })

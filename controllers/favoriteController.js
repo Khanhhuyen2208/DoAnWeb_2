@@ -1,4 +1,4 @@
-const favorite = require('../models/favorites')
+const favorite = require('../models/favorite')
 const queryUtils = require('../services/query')
 
 /**
@@ -9,9 +9,12 @@ const queryUtils = require('../services/query')
 async function index (req, res) {
   let favorites
   let limit = queryUtils.getQueryString(req.query)
+  let body = { ...req.query }
+  delete body.page
+  delete body.limit
 
   try {
-    favorites = await favorite.index(limit)
+    favorites = await favorite.index(limit, body)
   } catch (e) {
     return res.sendStatus(500)
   }

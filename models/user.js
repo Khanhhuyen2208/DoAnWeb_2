@@ -7,19 +7,21 @@ const tableName = 'users'
  * Get users by input condition
  * @param {Object} input
  */
-function index(limit = {}, input = {}) {
+function index (limit = {}, input = {}) {
   // Create query string
-  return new Promise(function(resolve, reject) {
+  return new Promise(function (resolve, reject) {
+    let whereStatement = queryUtils.createWhereStatement(input)
+    let limitStatement = queryUtils.createLimitStatement(limit)
     let sql = `Select * From ${tableName} 
-      ${queryUtils.createWhereStatement(input)} 
-      ${queryUtils.createLimitStatement(limit)}`
+      ${whereStatement} 
+      ${limitStatement}`
 
-    DBManage.executeQuery(sql, function(err, data) {
+    DBManage.executeQuery(sql, function (err, data) {
       if (err) {
         reject(err)
       }
 
-      let res = meta.createMetaData(tableName, limit, data)
+      let res = meta.createMetaData(tableName, limit, data, whereStatement)
       resolve(res)
     })
   })
@@ -29,11 +31,11 @@ function index(limit = {}, input = {}) {
  * Show a model by id
  * @param {Number} id
  */
-function show(id) {
-  return new Promise(function(resolve, reject) {
+function show (id) {
+  return new Promise(function (resolve, reject) {
     DBManage.executeQuery(
       `Select * From ${tableName} where id = ${id}`,
-      function(err, data) {
+      function (err, data) {
         if (err) {
           reject(err)
         }
@@ -47,9 +49,9 @@ function show(id) {
  * Create new model
  * @param {Object} body
  */
-function store(body) {
-  return new Promise(function(resolve, reject) {
-    DBManage.executeQuery(`Insert into ${tableName} Set ?`, body, function(
+function store (body) {
+  return new Promise(function (resolve, reject) {
+    DBManage.executeQuery(`Insert into ${tableName} Set ?`, body, function (
       err,
       data
     ) {
@@ -66,12 +68,12 @@ function store(body) {
  * @param {Number} id
  * @param {Object} body
  */
-function update(id, body) {
-  return new Promise(function(resolve, reject) {
+function update (id, body) {
+  return new Promise(function (resolve, reject) {
     DBManage.executeQuery(
       `Update ${tableName} set ? where ?`,
       [body, { id: id }],
-      function(err, data) {
+      function (err, data) {
         if (err) {
           reject(err)
         }
@@ -85,9 +87,9 @@ function update(id, body) {
  * Delete a model by id
  * @param {Number} id
  */
-function deleteModel(id) {
-  return new Promise(function(resovle, reject) {
-    DBManage.executeQuery(`Delete from ${tableName} where id = ${id}`, function(
+function deleteModel (id) {
+  return new Promise(function (resovle, reject) {
+    DBManage.executeQuery(`Delete from ${tableName} where id = ${id}`, function (
       err,
       data
     ) {

@@ -1,4 +1,4 @@
-const bidlog = require('../models/bidlogs')
+const bidlog = require('../models/bidlog')
 const queryUtils = require('../services/query')
 
 /**
@@ -9,9 +9,12 @@ const queryUtils = require('../services/query')
 async function index (req, res) {
   let bidlogs
   let limit = queryUtils.getQueryString(req.query)
+  let body = { ...req.query }
+  delete body.page
+  delete body.limit
 
   try {
-    bidlogs = await bidlog.index(limit)
+    bidlogs = await bidlog.index(limit, body)
   } catch (e) {
     return res.sendStatus(500)
   }
