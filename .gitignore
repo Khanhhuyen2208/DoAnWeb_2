@@ -67,3 +67,4 @@ typings/
 yarn.lock
 package-lock.json
 config/database.json
+/.project
