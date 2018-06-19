@@ -4,6 +4,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="css/style_1.css"/>
 <title>DO AN WEB 2</title>
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
 </head>
 <style>
 	.khung
@@ -34,20 +39,14 @@
 <body>
 	<div class="container">
     	<div class="logo">
-        	<img src="image/1_Primary_logo_on_transparent_156x69.png" />
+        	
         </div>
   		<div class="khung">
         <form>
-        	<input type="text" placeholder="Tìm Kiếm" />
-            <input type="button" value="Tìm Kiếm"  />
+        	<input type="text" id="productVal"  placeholder="Tìm Kiếm" />
+            <input type="button" id="search" value="Tìm Kiếm"  />
         </form>
-        <div class="slogan">
-        	<ul>    	
-                <li><a href="#">Hồ Sơ Của Tôi</a></li>
-                <li><a href="form_dangnhap.html">Đăng Nhập</a></li>
-                <li><a href="form_dangki.html">Đăng Kí</a></li>
-           </ul>
-        </div>
+        
     </div>
     <div style="clear:both">
     </div>
@@ -70,18 +69,13 @@
     <div style="clear:both">
     </div>
     <section class="container section_1">
-    	<aside>
-        	<ul>
-                <li><a href="#">SamSung</a></li>
-                <li><a href="#">Iphone</a></li>
-                <li><a href="#">Oppo</a></li>
-            </ul>
-          
-        </aside>
+    
         <div class="content">
-        	<h1>Chi Tiết Sản Phẩm</h1>
-            <article class="item" style="width:400px; height:560px"><a href="https://cdn.tgdd.vn/Products/Images/42/73908/samsung-galaxy-j3-2-400x460.png"></a></article>
-           	<div class="span4">
+        	<Center><h1>Chi Tiết Sản Phẩm</h1></Center>
+            <div class="item"  style="width:460px; height:560px">
+                <img scr="https://cdn.tgdd.vn/Products/Images/42/73908/samsung-galaxy-j3-2-400x460.png" alt="gd" id="image"/>
+            </div>
+        
 				<h1>Tên Sản Phẩm</h1>
 				<hr class="soft"/>
 				
@@ -89,61 +83,68 @@
 				  <div class="control-group">
 					<label class="control-label"><span><h3>Giá gốc của sản phẩm: </h3></span></label>
 					<div class="col-3">
-					<input type="text" placeholder="Gia Goc" style="width:350px; height:30px"/>
+					<input type="text" value="" id="giaGoc" placeholder="Gia Goc" style="width:350px; height:30px"/>
 					</div>
 				  </div>
 				
                 <div class="control-group">
 					<label class="control-label"><span><h3>Giá hiện tại của sản phẩm: </h3></span></label>
 					<div class="col-3">
-					<input type="text" placeholder="Gia Hien Tai" style="width:350px; height:30px"/>
+					<input type="text" value="" id="giaHienTai" placeholder="Gia Hien Tai" style="width:350px; height:30px"/>
 					</div>
                     
                     <div class="control-group">
 					<label class="control-label"><span><h3>Người Bán: </h3></span></label>
 					<div class="col-3">
-					<input type="text" style="width:350px; height:30px"/>
+					<input type="text" value="" id="nguoiBan" style="width:350px; height:30px"/>
 					</div>
                     
                     <div class="control-group">
                         <label class="control-label"><span><h3>Đánh Giá Sản Phẩm: </h3></span></label>
                         <div class="col-3">
-                        <input type="number"max="5" min="1" style="width:350px; height:30px"/>
+                        <input type="number" value="" id="danhGia" max="5" min="1" style="width:350px; height:30px"/>
                         </div>
 
                     <div class="control-group">
 					<label class="control-label"><span><h3>Người Giữ Giá Cao Nhất: </h3></span></label>
 					<div class="col-3">
-					<input type="text" style="width:350px; height:30px"/>
+					<input type="text" value="" id="nguoiGiaCaoNhat" style="width:350px; height:30px"/>
 					</div>
                 
 				  <div class="control-group">
 					<label class="control-label"><span><h3>Số Lượt Xem: </h3></span></label>
 					<div class="col-3">
-					<input type="text" placeholder="So Luot Xem San Pham" style="width:350px; height:30px"/>
+					<input type="text"value="" id="soLuotXem" placeholder="So Luot Xem San Pham" style="width:350px; height:30px"/>
 					</div>
 				  </div>
                   
                   <div class="control-group">
 					<label class="control-label"><span><h3>Thời Gian Đăng: </h3></span></label>
 					<div class="col-3">
-					<input type="datetime" style="width:350px; height:30px"/>
+					<input type="datetime" value="" id="thoiGianDang" style="width:350px; height:30px"/>
 					</div>
                     
                     <div class="control-group">
 					<label class="control-label"><span><h3>Thời Gian Hết Hạn: </h3></span></label>
 					<div class="col-3">
-					<input type="datetime" style="width:350px; height:30px"/>
+					<input type="datetime" value="" id="thoiGianHetHan" style="width:350px; height:30px"/>
                     </div>
                     
                     <div class="control-group">
                         <label class="control-label"><span><h3>Giá Đấu: </h3></span></label>
                         <div class="col-3">
-                        <input type="datetime" style="width:350px; height:30px"/>
+                        <input type="datetime" value="" id="giaDau" style="width:350px; height:30px"/>
                         </div>
 				  </div>
 					<br />
-				  <center><button type="submit" style="width:250px; height:30px"> Thêm Vào Giỏ Hàng</button></center>
+                  <center><button 
+                    
+                    id="addCart" style="width:250px; height:30px">
+                    <a style="text-decoration: none;" href="http://localhost:3001/giohang.html">
+                        Thêm Vào Giỏ Hàng
+                    
+                    </a>
+                    </button></center>
                   <br />
 				</form>
 			</div>
@@ -151,11 +152,9 @@
 	
                   <div class="container-fluid text-center">    
                 <table class="table" style="width:100%;">
+                    <center><h2>Thông Tin Sản Phẩm: </h2></center>
                    <thead>
                 	
-                      <tr>
-                      	<td colspan="2"><center><h2>Thông Tin Sản Phẩm: </h2></center></td>
-                      </tr>
                       <tr>
                         <td>Màn hình: </td>
                         <td>Maria Anders</td>
@@ -188,5 +187,38 @@
     
     <footer class="container">
     </footer>
+    <script>
+
+        $("#search").click(function(){
+            $.ajax({
+                type:"get",
+                url:"/api/product/"+$("#productVal").val()
+            })
+            .done(function(data) {
+                var currentProDuct=$("#productVal").val()-1
+                
+                $('#giaGoc').val(data[currentProDuct].starting_price);
+                $('#giaHienTai').val(data[currentProDuct].price);
+                $('#nguoiBan').val(data[currentProDuct].seller_id);
+                $('#danhGia').val(data[currentProDuct].starting_price);
+                $('#nguoiGiaCaoNhat').val(data[currentProDuct].starting_price);
+                $('#soLuotXem').val(data[currentProDuct].views);
+                $('#thoiGianDang').val(data[currentProDuct].start_at);
+                $('#thoiGianHetHan').val(data[currentProDuct].expire_at);
+                $('#giaDau').val(data[currentProDuct].is_auto_renew);
+
+            $.ajax({
+                type:"get",
+                url:"/api/image/"+$("#productVal").val()
+            
+            }).done(function(data){
+                var currentProDuctImg=$("#productVal").val()-1
+                $("#image").attr('scr',data[currentProDuctImg].image_link)
+            })
+});
+    });
+
+            
+    </script>
 </body>
 </html>
