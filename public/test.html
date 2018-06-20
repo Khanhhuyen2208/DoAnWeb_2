@@ -1,144 +1,551 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>DO AN WEB</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script
-    src="https://code.jquery.com/jquery-2.2.4.min.js"
-    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-    crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="/JS/main.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>DO AN WEB</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <style>
-  body {font-family: "Lato", sans-serif}
-  .mySlides {display: none}
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
 </style>
-<body onload="load()">
-  <div id="app">
+<body>
 
-    <!-- Navbar -->
-    <div class="w3-top">
-      <div class="w3-bar w3-black w3-card">
-        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-        <a href="#" class="w3-bar-item w3-button w3-padding-large">TRANG CHỦ</a>
-        <a href="#" class="w3-bar-item w3-button w3-padding-large">TẤT CẢ SẢN PHẨM</a>
-        <a href="#dienthoai" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ĐIỆN THOẠI</a>
-        <a href="#laptop" class="w3-bar-item w3-button w3-padding-large w3-hide-small">LAPTOP</a>
-        <a href="#maytinhbang" class="w3-bar-item w3-button w3-padding-large w3-hide-small">MÁY TÍNH BẢNG</a>
-        <div class="w3-dropdown-hover w3-hide-small">
-          <button class="w3-padding-large w3-button" title="More">HỒ SƠ CỦA TÔI <i class="fa fa-caret-down"></i></button>
-          <div class="w3-dropdown-content w3-bar-block w3-card-4">
-            <a href="http://localhost:3001/form_dangki.html" class="w3-bar-item w3-button">ĐĂNG KÍ</a>
-            <a href="http://localhost:3001/form_dangnhap.html" class="w3-bar-item w3-button">ĐĂNG NHẬP</a>
-            <a href="#lienhe" class="w3-bar-item w3-button">LIÊN HỆ</a>
-          </div>
-        </div>
-        <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">TRANG CHỦ</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">TẤT CẢ SẢN PHẨM</a>
+    <a href="#dienthoai" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ĐIỆN THOẠI</a>
+    <a href="#laptop" class="w3-bar-item w3-button w3-padding-large w3-hide-small">LAPTOP</a>
+    <a href="#maytinhbang" class="w3-bar-item w3-button w3-padding-large w3-hide-small">MÁY TÍNH BẢNG</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">HỒ SƠ CỦA TÔI <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+      	<a href="quanlyHoSoCaNhan.html" class="w3-bar-item w3-button">QUẢN LÝ HỒ SƠ CÁ NHÂN</a>
+        <a href="#" class="w3-bar-item w3-button">ĐĂNG NHẬP</a>
+        <a href="#" class="w3-bar-item w3-button">ĐĂNG KÍ</a>
+        <a href="#lienhe" class="w3-bar-item w3-button">LIÊN HỆ</a>
       </div>
     </div>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
 
-    <div id="nav" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-      <a href="#dienthoai" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ĐIỆN THOẠI</a>
-      <a href="#laptop" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">LAPTOP</a>
-      <a href="#maytinhbang" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MAYTINHBANG</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+<div id="nav" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#dienthoai" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ĐIỆN THOẠI</a>
+  <a href="#laptop" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">LAPTOP</a>
+  <a href="#maytinhbang" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MAYTINHBANG</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+</div>
+
+<!-- slider -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+ 
+  <div class="mySlides w3-display-container w3-center">
+    <img src="image/Samsung-Galaxy-S9_SamsungGalaxyS9_S91.jpeg" style="width:50%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">  
     </div>
-
-    <div class="w3-content" style="max-width:2000px;margin-top:46px">
-
-      <!-- slider -->
-      <div class="mySlides w3-display-container w3-center">
-        <img src="image/Samsung-Galaxy-S9_SamsungGalaxyS9_S91.jpeg" style="width:50%">
-        <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-        </div>
-      </div>
-      <div class="mySlides w3-display-container w3-center">
-        <img src="image/HT1_FvBFGlcXXagOFbX1.jpg" style="width:50%">
-        <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-        </div>
-      </div>
-      <div class="mySlides w3-display-container w3-center">
-        <img src="image/da5feb63-8127-4c3a-9ec6-3b268ff6c7b0.png" style="width:50%">
-        <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-        </div>
-      </div>
-      <!-- slider -->
-
-      <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:1000px" id="dienthoai">
-        <h2 class="w3-wide">TOP SẢN PHẨM CÓ NHIỀU LƯỢT RA GIÁ NHẤT</h2>
-        <div id="catalog_1" class="w3-row w3-padding-32"></div>
-        <h2 class="w3-wide">TOP SẢN PHẨM CÓ GIÁ CAO NHẤT</h2>
-        <div id="catalog_2" class="w3-row w3-padding-32"></div>
-        <h2 class="w3-wide">TOP SẢN PHẨM GẦN KẾT THÚC</h2>
-        <div id="catalog_3" class="w3-row w3-padding-32"></div>
-      </div>
-
-      <!-- lien he -->
-      <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="lienhe">
-        <h2 class="w3-wide w3-center">LIÊN HỆ</h2>
-        <p class="w3-opacity w3-center">HÃY LIÊN HỆ VỚI CHÚNG TÔI</p>
-        <div class="w3-row w3-padding-32">
-          <div class="w3-col m6 w3-large w3-margin-bottom">
-            <i class="fa fa-map-marker" style="width:30px"></i> ĐẤU GIÁ NHANH , VIỆT NAM<br>
-            <i class="fa fa-phone" style="width:30px"></i> Phone: +00560197<br>
-            <i class="fa fa-envelope" style="width:30px"> </i> Email: daugianhanh.com<br>
-          </div>
-          <div class="w3-col m6">
-            <form action="/action_page.php" target="_blank">
-              <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-                <div class="w3-half">
-                  <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-                </div>
-                <div class="w3-half">
-                  <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-                </div>
-              </div>
-              <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-              <button class="w3-button w3-black w3-section w3-right" type="submit">GỬI</button>
-            </form>
-          </div>
-        </div>
-      </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="image/HT1_FvBFGlcXXagOFbX1.jpg" style="width:50%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">  
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="image/da5feb63-8127-4c3a-9ec6-3b268ff6c7b0.png" style="width:50%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small"> 
     </div>
   </div>
 
-  <script>
-    var myIndex = 0;
-    carousel();
+<!-- dien thoai -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:1000px" id="dienthoai">
+    <h2 class="w3-wide">TOP SẢN PHẨM CÓ NHIỀU LƯỢT RA GIÁ NHẤT</h2>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-third">
+        <p>SAM SUNG GALAXY S9</p>
+        <img src="image/samsung-galaxy-s9-4-600x600.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM : 5.000.000đ</b></p>
+         <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+      <div class="w3-third">
+        <p>SAMSUNG J7 PRO</p>
+        <img src="image/item_XL_23806906_34455469.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM : 4.000.000đ</b></p>
+         <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+      <div class="w3-third">
+        <p>IPHONE 6 PLUS</p>
+        <img src="image/iphone-6-plus-cu-1-1.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM : 6.000.000đ</b></p>
+         <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+      <div class="w3-third">
+        <p>XIAOMI RED MI NOTE 4</p>
+        <img src="image/dan-cuong-luc-xiaomi-redmi-note-4.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM : 2.000.000đ</b></p>
+         <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+      <div class="w3-third">
+        <p>IPHONE 7 PLUS</p>
+        <img src="image/tải xuống.jfif" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM : 5.000.000đ</b></p>
+         <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+      <div class="w3-third">
+        <p>IPHONE X</p>
+        <img src="image/tải xuống (1).jfif" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM : 6.000.000đ</b></p>
+         <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+    </div>
 
-    function carousel() {
-      var i;
-      var x = document.getElementsByClassName("mySlides");
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-      }
-      myIndex++;
-      if (myIndex > x.length) {myIndex = 1}
-      x[myIndex-1].style.display = "block";
-      setTimeout(carousel, 4000);
+
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:1000px" id="dienthoai">
+    <h2 class="w3-wide">TOP SẢN PHẨM CÓ GIÁ CAO NHẤT</h2>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-third">
+        <p>SAM SUNG GALAXY S9</p>
+        <img src="image/samsung-galaxy-s9-4-600x600.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+      <div class="w3-third">
+        <p>SAMSUNG GALAXY S8 PLUS</p>
+        <img src="image/mobile-samsung-galaxy-s8-plus-3.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.500.000đ</b></p>
+ 		<button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+      <div class="w3-third">
+        <p>IPHONE 6 PLUS</p>
+        <img src="image/iphone-6-plus-cu-1-1.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 4.000.000đ</b></p>
+        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+      <div class="w3-third">
+        <p>IPHONE 7</p>
+        <img src="image/tải xuống (4).jfif" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 6.000.000đ</b></p>
+        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+      <div class="w3-third">
+        <p>IPHONE 7 PLUS</p>
+        <img src="image/tải xuống.jfif" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+      <div class="w3-third">
+        <p>IPHONE X</p>
+        <img src="image/tải xuống (1).jfif" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.800.000đ</b></p>
+        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+    </div>
+
+	
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:1000px" id="dienthoai">
+    <h2 class="w3-wide">TOP SẢN PHẨM GẦN KẾT THÚC</h2>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-third">
+        <p>IPHONE X</p>
+        <img src="image/tải xuống (1).jfif" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 6.000.000đ</b></p>
+        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+      <div class="w3-third">
+        <p>XIAOMI 5</p>
+        <img src="image/xiaomi-mi5-black_1_1.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 3.000.000đ</b></p>
+        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+      <div class="w3-third">
+        <p>SAMSUNG J3 PRO</p>
+        <img src="image/samsung-galaxy-j3-pro-2017-hh-600x600.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 4.000.000đ</b></p>
+        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+      <div class="w3-third">
+        <p>SAMSUNG J5 PRIME</p>
+        <img src="image/tải xuống (3).jfif" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 3.000.000đ</b></p>
+        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+      <div class="w3-third">
+        <p>IPHONE 7 PLUS</p>
+        <img src="image/tải xuống.jfif" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+      <div class="w3-third">
+        <p>XIAOMI 6</p>
+        <img src="image/tải xuống (2).jfif" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 3.000.000đ</b></p>
+        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+    </div>
+    
+    
+<!-- laptop -->  
+  <div class="w3-black" id="laptop">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:1000px">
+      <h2 class="w3-wide w3-center">TOP SẢN PHẨM CÓ NHIỀU LƯỢT RA GIÁ NHẤT</h2>
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <img src="image/dell-inspiron-14-5459-gold-01_1.jpg" alt="Dell Inspiron Gaming Gold" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>DELL INSPRISON GAMING GOLD</b></p>
+            <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="image/images.jfif" alt="ASUS ROG GL553VE GAMING" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>ASUS ROG GL553VE GAMING</b></p>
+            <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="image/tải xuống (5).jfif" alt="ACER ASPRISE A315-31-C8GB" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>ACER ASPRISE A315-31-C8GB</b></p>
+            <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+          </div>
+        </div>
+      </div>
+       <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <img src="image/dell-inspiron-14-5459-gold-01_1.jpg" alt="Dell Inspiron Gaming Gold" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>DELL INSPRISON GAMING GOLD</b></p>
+            <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="image/images.jfif" alt="ASUS ROG GL553VE GAMING" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>ASUS ROG GL553VE GAMING</b></p>
+            <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="image/tải xuống (5).jfif" alt="ACER ASPRISE A315-31-C8GB" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>ACER ASPRISE A315-31-C8GB</b></p>
+            <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+          </div>
+        </div>
+   
+    <div class="w3-container w3-content w3-padding-64" style="max-width:1000px">
+      <h2 class="w3-wide w3-center">TOP SẢN PHẨM CÓ GIÁ CAO NHẤT</h2>
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <img src="image/dell-inspiron-14-5459-gold-01_1.jpg" alt="Dell Inspiron Gaming Gold" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>DELL INSPRISON GAMING GOLD</b></p>
+            <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="image/images.jfif" alt="ASUS ROG GL553VE GAMING" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>ASUS ROG GL553VE GAMING</b></p>
+            <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="image/tải xuống (5).jfif" alt="ACER ASPRISE A315-31-C8GB" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>ACER ASPRISE A315-31-C8GB</b></p>
+            <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+          </div>
+        </div>
+      </div>
+       <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <img src="image/dell-inspiron-14-5459-gold-01_1.jpg" alt="Dell Inspiron Gaming Gold" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>DELL INSPRISON GAMING GOLD</b></p>
+            <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="image/images.jfif" alt="ASUS ROG GL553VE GAMING" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>ASUS ROG GL553VE GAMING</b></p>
+            <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="image/tải xuống (5).jfif" alt="ACER ASPRISE A315-31-C8GB" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>ACER ASPRISE A315-31-C8GB</b></p>
+            <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+          </div>
+        </div>
+    
+    
+    <div class="w3-container w3-content w3-padding-64" style="max-width:1000px">
+      <h2 class="w3-wide w3-center">TOP SẢN PHẨM GẦN KẾT THÚC</h2>
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <img src="image/dell-inspiron-14-5459-gold-01_1.jpg" alt="Dell Inspiron Gaming Gold" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>DELL INSPRISON GAMING GOLD</b></p>
+            <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="image/images.jfif" alt="ASUS ROG GL553VE GAMING" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>ASUS ROG GL553VE GAMING</b></p>
+            <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="image/tải xuống (5).jfif" alt="ACER ASPRISE A315-31-C8GB" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>ACER ASPRISE A315-31-C8GB</b></p>
+            <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+          </div>
+        </div>
+      </div>
+       <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <img src="image/dell-inspiron-14-5459-gold-01_1.jpg" alt="Dell Inspiron Gaming Gold" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>DELL INSPRISON GAMING GOLD</b></p>
+            <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="image/images.jfif" alt="ASUS ROG GL553VE GAMING" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>ASUS ROG GL553VE GAMING</b></p>
+            <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="image/tải xuống (5).jfif" alt="ACER ASPRISE A315-31-C8GB" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>ACER ASPRISE A315-31-C8GB</b></p>
+            <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- may tinh bang -->  
+<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:1000px" id="maytinhbang">
+    <h2 class="w3-wide">TOP SẢN PHẨM CÓ NHIỀU LƯỢT RA GIÁ NHẤT</h2>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-third">
+        <p>XIAOMI PAD 3</p>
+        <img src="image/xiaomi-mipad-2-16gb-gray-1_1.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+      <div class="w3-third">
+        <p>HUWEI MADI PAD</p>
+        <img src="image/huawei-mediapad-t3-80-564-600x600.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+      <div class="w3-third">
+        <p>MOBELL TAB</p>
+        <img src="image/mobell-tab-7s-65-600x600.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+      <div class="w3-third">
+        <p>KING COM SKY</p>
+        <img src="image/169706001475487615.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+      <div class="w3-third">
+        <p>MOBELL TAB 8</p>
+        <img src="image/mobell-tab-7s-65-600x600.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+      <div class="w3-third">
+        <p>ACER B1</p>
+        <img src="image/may-tinh-bang-acer-b1733-mtk8321-7-16gb-pCBVtN.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+    </div>
+
+
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:1000px" id="maytinhbang">
+    <h2 class="w3-wide">TOP SẢN PHẨM CÓ GIÁ CAO NHẤT</h2>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-third">
+        <p>XIAOMI PAD 3</p>
+        <img src="image/xiaomi-mipad-2-16gb-gray-1_1.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+      <div class="w3-third">
+        <p>HUWEI MADI PAD</p>
+        <img src="image/huawei-mediapad-t3-80-564-600x600.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+      <div class="w3-third">
+        <p>MOBELL TAB</p>
+        <img src="image/mobell-tab-7s-65-600x600.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+      <div class="w3-third">
+        <p>KING COM SKY</p>
+        <img src="image/169706001475487615.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+      <div class="w3-third">
+        <p>MOBELL TAB 8</p>
+        <img src="image/mobell-tab-7s-65-600x600.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+      <div class="w3-third">
+        <p>ACER B1</p>
+        <img src="image/may-tinh-bang-acer-b1733-mtk8321-7-16gb-pCBVtN.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+    </div>
+
+	
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:1000px" id="maytinhbang">
+    <h2 class="w3-wide">TOP SẢN PHẨM GẦN KẾT THÚC</h2>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-third">
+        <p>XIAOMI PAD 3</p>
+        
+        <img src="image/xiaomi-mipad-2-16gb-gray-1_1.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+      <div class="w3-third">
+        <p>HUWEI MADI PAD</p>
+        <img src="image/huawei-mediapad-t3-80-564-600x600.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+      <div class="w3-third">
+        <p>MOBELL TAB</p>
+        <img src="image/mobell-tab-7s-65-600x600.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+      <div class="w3-third">
+        <p>KING COM SKY</p>
+        <img src="image/169706001475487615.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+      <div class="w3-third">
+        <p>MOBELL TAB 8</p>
+        <img src="image/mobell-tab-7s-65-600x600.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+      <div class="w3-third">
+        <p>ACER B1</p>
+        <img src="image/may-tinh-bang-acer-b1733-mtk8321-7-16gb-pCBVtN.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM: 5.000.000đ</b></p>
+        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>
+      </div>
+</div>
+</div>
+ 
+  <!-- lien he -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="lienhe">
+    <h2 class="w3-wide w3-center">LIÊN HỆ</h2>
+    <p class="w3-opacity w3-center">HÃY LIÊN HỆ VỚI CHÚNG TÔI</p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i> ĐẤU GIÁ NHANH , VIỆT NAM<br>
+        <i class="fa fa-phone" style="width:30px"></i> Phone: +00560197<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: daugianhanh.com<br>
+      </div>
+      <div class="w3-col m6">
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <button class="w3-button w3-black w3-section w3-right" type="submit">GỬI</button>
+        </form>
+      </div>
+    </div>
+  </div>
+<script>
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
     }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 4000);    
+}
 
-    function myFunction() {
-      var x = document.getElementById("navDemo");
-      if (x.className.indexOf("w3-show") == -1) {
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
-      } else {
+    } else { 
         x.className = x.className.replace(" w3-show", "");
-      }
     }
+}
 
-    var modal = document.getElementById('ticketModal');
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-  </script>
+
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
 </body>
 </html>
