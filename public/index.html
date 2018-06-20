@@ -19,7 +19,7 @@
   body {font-family: "Lato", sans-serif}
   .mySlides {display: none}
 </style>
-<body onload="load()">
+<body onload="loadIndexPage()">
 <div id="app">
 
   <!-- Navbar -->
@@ -42,8 +42,12 @@
           <a id="btn-user" href="#user" style="display: none;" class="w3-bar-item w3-button"></a>
         </div>
       </div>
-      <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i
-        class="fa fa-search"></i></a>
+      <a href="#" class="w3-padding-large w3-hover-red w3-hide-small w3-right">
+          <form action="#" name="formTimKiem" id="formTimKiem">
+            <input type="text" placeholder="Tìm Kiếm.." name="txtTimKiem" id="txtTimKiem">
+            <button type="button" name="btnTimKiem" id="btnTimKiem"><i class="fa fa-search"></i></button>
+          </form>
+      </a>
     </div>
   </div>
 
@@ -143,6 +147,25 @@
       modal.style.display = "none";
     }
   }
+
+
 </script>
+
+<script>
+    $(function(){
+        $('#btnTimKiem').on('click', function(){
+            $.ajax({
+                url: '/product/search',
+                data:{
+                    productName:$('#txtTimKiem').val(),
+                }
+            }).done(function(response){
+                console.log('ok')
+                alert(JSON.stringify(response));
+            })
+        })
+    });
+</script>
+
 </body>
 </html>
