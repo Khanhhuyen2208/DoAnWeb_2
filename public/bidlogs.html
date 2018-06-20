@@ -19,7 +19,7 @@
   body {font-family: "Lato", sans-serif}
   .mySlides {display: none}
 </style>
-<body onload="loadIndexPage()">
+<body onload="loadProductsPage()">
 <div id="app">
 
   <!-- Navbar -->
@@ -58,30 +58,7 @@
                 <th>Giá Đấu</th>
               </tr>
             </thead>
-            <tbody>
-                <script>
-                    // var table = document.getElementById("myTable");
-                    $.ajax({
-                        url: '/api/user',
-                       
-                    }).done(function (res) {
-                        console.log(res)
-                        var btn = document.createElement("BUTTON");
-                        var deleteUser = document.createTextNode("Delete");
-                        var reset = document.createTextNode("ResetPass");
-                        var tr
-                        for (var i = 0; i < res.data.length; i++) {
-                        tr = $('<tr>');
-                        tr.append("<td>" + res.data[i].id + "</td>");
-                        tr.append("<td>" + res.data[i].product_id + "</td>");
-                        tr.append("<td>" + res.data[i].buyer_id + "</td>");
-                        tr.append("<td>" + res.data[i].price + "</td>");
-                        $('#myTable').append(tr);
-                    }
-                    })
-                    
-                </script>      
-            
+            <tbody id="table">
             </tbody>
           </table>
     </section>

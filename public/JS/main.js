@@ -10,6 +10,12 @@ async function loadDetailPage () {
 
 async function loadAdminPage () {}
 
+async function loadProductsPage () {
+  let products = await getProducts()
+  getTableProducts(products)
+  getUserInfo()
+}
+
 function getUserInfo () {
   let userName = localStorage.getItem('userName') || null
   let userId = localStorage.getItem('userId') || null
@@ -81,6 +87,36 @@ async function ProductList (products) {
   }
 }
 
+async function getTableProducts (products) {
+  console.log(products)
+  for (let i in products) {
+    let obj = products[i]
+    let image
+    let imageLink
+    try {
+      image = await axios.get('/api/image?product_id=' + obj.id)
+      imageLink = image.data.data[0]
+      if (!imageLink) {
+        continue
+      }
+    } catch (e) {
+      console.log(e)
+      continue
+    }
+    imageLink = imageLink.image_link
+    let product = new Product(
+      obj.id,
+      obj.catalog_id,
+      obj.name,
+      `${obj.starting_price} đ`,
+      `${obj.price} đ`,
+      imageLink
+    )
+    let el = renderTrProduct(product)
+    $(`#table`).append(el)
+  }
+}
+
 function getProducts () {
   return new Promise(function (resolve, reject) {
     axios
@@ -113,5 +149,18 @@ function renderProduct (product) {
       product.id
     }" class="w3-button w3-black w3-margin-bottom" onclick="redirect(this)">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>\n` +
     '      </div>'
+  )
+}
+
+function renderTrProduct (product) {
+  return (
+    '<tr>\n' +
+    `<td>${product.id}</td>\n` +
+    `<td>${product.name}</td>\n` +
+    `<td>${'Mã người mua'}</td>\n` +
+    `<td>${'Tên người mua'}</td>\n` +
+    `<td>${'Lần đấu giá'}</td>\n` +
+    `<td>${product.currentPrice}</td>\n` +
+    '</tr>'
   )
 }
