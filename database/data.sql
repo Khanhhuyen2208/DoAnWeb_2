@@ -164,6 +164,78 @@ INSERT INTO auctions (`product_id`,`user_id`) VALUES (12,8 );
 INSERT INTO auctions (`product_id`,`user_id`) VALUES (13, 6);
 INSERT INTO auctions (`product_id`,`user_id`) VALUES (14, 5);
 INSERT INTO auctions (`product_id`,`user_id`) VALUES (15, 8);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (15, 8);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (16, 8);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (17, 8);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (18, 8);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (19, 6);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (20, 5);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (21, 8);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (22, 8);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (23, 5);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (24, 6);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (25, 7);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (26, 7);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (27, 6);
+
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (10,6 );
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (11,7 );
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (12,8 );
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (13, 6);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (14, 5);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (15, 8);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (15, 5);
+
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (1,8 );
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (2,5);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (3,7);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (4,8 );
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (5, 8);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (6, 6);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (7,8 );
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (8,7 );
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (9,7);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (10,8 );
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (11,5);
+
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (24, 5);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (25, 6);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (26, 5);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (27, 5);
+
+
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (1,6 );
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (2,8);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (3,8);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (4,5 );
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (5, 6);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (6, 8);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (7, 5);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (8,5 );
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (9, 7);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (10,7 );
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (11,6 );
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (12,5 );
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (13, 5);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (14, 6);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (15, 7);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (15, 6);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (16, 7);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (17, 6);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (18, 5);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (19, 8);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (20, 8);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (21, 7);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (22, 8);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (23, 7);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (24, 5);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (25, 8);
+INSERT INTO auctions (`product_id`,`user_id`) VALUES (26, 5);
+
+
+
+
+
 
 INSERT INTO favorites (`product_id`,`user_id`) VALUES (1,5 );
 INSERT INTO favorites (`product_id`,`user_id`) VALUES (2,6);
@@ -229,3 +301,17 @@ INSERT INTO bidlogs (`product_id`,`buyer_id`,`price`) VALUES (12,2,10000000);
 INSERT INTO bidlogs (`product_id`,`buyer_id`,`price`) VALUES (13,2,10000000);
 INSERT INTO bidlogs (`product_id`,`buyer_id`,`price`) VALUES (14,2,40000000);
 INSERT INTO bidlogs (`product_id`,`buyer_id`,`price`) VALUES (15,2,10000000);
+INSERT INTO bidlogs (`product_id`,`buyer_id`,`price`) VALUES (16,2,10000000);
+INSERT INTO bidlogs (`product_id`,`buyer_id`,`price`) VALUES (17,2,10000000);
+INSERT INTO bidlogs (`product_id`,`buyer_id`,`price`) VALUES (18,2,6000000);
+INSERT INTO bidlogs (`product_id`,`buyer_id`,`price`) VALUES (19,2,8000000);
+INSERT INTO bidlogs (`product_id`,`buyer_id`,`price`) VALUES (20,2,10000000);
+INSERT INTO bidlogs (`product_id`,`buyer_id`,`price`) VALUES (21,2,10000000);
+INSERT INTO bidlogs (`product_id`,`buyer_id`,`price`) VALUES (22,2,8000000);
+INSERT INTO bidlogs (`product_id`,`buyer_id`,`price`) VALUES (23,2,6000000);
+INSERT INTO bidlogs (`product_id`,`buyer_id`,`price`) VALUES (24,2,8000000);
+INSERT INTO bidlogs (`product_id`,`buyer_id`,`price`) VALUES (25,2,40000000);
+INSERT INTO bidlogs (`product_id`,`buyer_id`,`price`) VALUES (26,2,25000000);
+INSERT INTO bidlogs (`product_id`,`buyer_id`,`price`) VALUES (27,2,9000000);
+
+
