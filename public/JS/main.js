@@ -87,7 +87,6 @@ function Product (
 }
 
 async function ProductList (products) {
-  console.log(products)
   for (let i in products) {
     let obj = products[i]
     let image
@@ -122,7 +121,6 @@ async function ProductList (products) {
 }
 
 async function getTableProducts (products) {
-  console.log(products)
   for (let i in products) {
     let obj = products[i]
     let image

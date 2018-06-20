@@ -195,40 +195,43 @@ a[data-toggle="collapse"] {
         </nav>
         <div>
         <h1 style="color: red"> DANH SÁCH NGƯỜI THAM GIA SÀN ĐẤU </h1>
-        <table class="table">
+        <table class="table" id="myTable">
                 <thead>
                   <tr>
                     <th>id</th>
-                    <th>name</th>
-                    <th>email</th>
-                    <th>pasword</th>
-                    <th>address</th>
-                    <th>phonenumber</th>
-                    <th>role</th>
-                    <th>create_at</th>
-                    <th>update_at</th>
-                    <th> </th>
+                    <th>buyer_id</th>
+                    <th>price</th>
+                    
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                        <td>id</td>
-                        <td>name</td>
-                        <td>email</td>
-                        <td>pasword</td>
-                        <td>address</td>
-                        <td>phonenumber</td>
-                        <td>role</td>
-                        <td>create_at</td>
-                        <td>update_at</td>
-                        <td> <button type="button" class="btn btn-dark">CLICK RA KHỎI SÀN ĐÂU GIÁ</button>
-                        </td>
-                  </tr>
-                 
+                    
+                    
                 </tbody>
               </table> 
     </div> 
     </div>
+<script>
+
+    $.ajax({
+        url: '/api/bidlog',
+
+    }).done(function (res) {
+        console.log(res)
+        var btn = document.createElement("BUTTON");
+        var deleteUser = document.createTextNode("Delete");
+        var reset = document.createTextNode("ResetPass");
+        var tr
+        for (var i = 0; i < res.data.length; i++) {
+            tr = $('<tr>');
+            tr.append("<td>" + res.data[i].id + "</td>");
+            tr.append("<td>" + res.data[i].buyer_id+ "</td>");
+            tr.append("<td>" + res.data[i].price + "</td>");
+            tr.append("<td>" + "<button onclick=deleteProduct(" + res.data[i].id + ")> CLICK KHỎI SÀN ĐẤU GIÁ</button>"  + "</td>");
+            $('#myTable').append(tr);
+        }
+    })
+</script>
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!-- Popper.JS -->
