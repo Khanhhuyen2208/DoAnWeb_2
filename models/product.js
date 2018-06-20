@@ -29,21 +29,6 @@ function index (limit = {}, input = {}) {
   })
 }
 
-function search (productName) {
-  return new Promise(function (resovle, reject) {
-    DBManage.executeQuery(
-      `Select * from ${tableName} where name like '%" + ${productName} + "%'`,
-      function (err, data) {
-        if (err) {
-          console.log(err.message)
-          reject(err)
-        }
-        resovle(data)
-      }
-    )
-  })
-}
-
 function show (id) {
   return new Promise(function (resovle, reject) {
     DBManage.executeQuery(

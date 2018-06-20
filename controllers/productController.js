@@ -6,22 +6,6 @@ const queryUtils = require('../services/query')
  * @param {Request} req
  * @param {Response} res
  */
-async function search (req, res) {
-  let products
-
-  try {
-    products = await product.search(req.query.productName)
-  } catch (e) {
-    return res.sendStatus(500)
-  }
-  res.json(products)
-}
-
-/**
- * Get all products by request
- * @param {Request} req
- * @param {Response} res
- */
 async function index (req, res) {
   let products
   let limit = queryUtils.getQueryString(req.query)
@@ -113,6 +97,5 @@ module.exports = {
   show: show,
   store: store,
   update: update,
-  delete: deleteModel,
-  search: search
+  delete: deleteModel
 }
