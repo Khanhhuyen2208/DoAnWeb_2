@@ -18,7 +18,7 @@ function index (limit = {}, input = {}) {
       ${sortStatement} 
       ${limitStatement}`
 
-    DBManage.executeQuery(sql, function (err, data) {
+    DBManage.executeQuery(sql, {}, function (err, data) {
       if (err) {
         reject(err)
       }

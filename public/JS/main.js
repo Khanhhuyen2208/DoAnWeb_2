@@ -1,3 +1,21 @@
+function timeConverter (UNIX_timestamp) {
+  var delta = Math.abs(UNIX_timestamp) / 1000
+
+  // calculate (and subtract) whole days
+  var days = Math.floor(delta / 86400)
+  delta -= days * 86400
+
+  // calculate (and subtract) whole hours
+  var hours = Math.floor(delta / 3600) % 24
+  delta -= hours * 3600
+
+  // calculate (and subtract) whole minutes
+  var minutes = Math.floor(delta / 60) % 60
+  delta -= minutes * 60
+
+  return `${days} days ${hours} hours ${minutes} minutes`
+}
+
 async function loadIndexPage () {
   let products = await getProducts()
   ProductList(products)
@@ -48,13 +66,24 @@ function logout () {
   localStorage.removeItem('isAdmin')
 }
 
-function Product (id, catalog_id, name, initPrice, currentPrice, image) {
+function Product (
+  id,
+  catalog_id,
+  name,
+  initPrice,
+  currentPrice,
+  image,
+  expire_at,
+  numberOfBidlog
+) {
   this.id = id
   this.catalogId = catalog_id
   this.name = name
   this.initPrice = initPrice
   this.currentPrice = currentPrice
   this.imageLink = image
+  this.expire_at = expire_at
+  this.numberOfBidlog = numberOfBidlog
 }
 
 async function ProductList (products) {
@@ -63,9 +92,12 @@ async function ProductList (products) {
     let obj = products[i]
     let image
     let imageLink
+    let bidlogs
     try {
       image = await axios.get('/api/image?product_id=' + obj.id)
       imageLink = image.data.data[0]
+      bidlogs = await axios.get('/api/bidlog?product_id=' + obj.id)
+      bidlogs = bidlogs.data.total
       if (!imageLink) {
         continue
       }
@@ -80,7 +112,9 @@ async function ProductList (products) {
       obj.name,
       `${obj.starting_price} đ`,
       `${obj.price} đ`,
-      imageLink
+      imageLink,
+      obj.expire_at,
+      bidlogs
     )
     let el = renderProduct(product)
     $(`#catalog_${obj.catalog_id}`).append(el)
@@ -110,7 +144,8 @@ async function getTableProducts (products) {
       obj.name,
       `${obj.starting_price} đ`,
       `${obj.price} đ`,
-      imageLink
+      imageLink,
+      obj.expire_at
     )
     let el = renderTrProduct(product)
     $(`#table`).append(el)
@@ -136,6 +171,8 @@ function redirect (el) {
 }
 
 function renderProduct (product) {
+  let remainingTime = Date.parse(product.expire_at) - Date.now()
+  remainingTime = timeConverter(remainingTime)
   return (
     '<div class="w3-third">\n' +
     `        <p>${product.name}</p>\n` +
@@ -145,6 +182,10 @@ function renderProduct (product) {
     `        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM : ${
       product.initPrice
     }</b></p>\n` +
+    `<p><b style="color:#00F">Số Lượt Đánh Giá: ${
+      product.numberOfBidlog
+    } Lượt</p>\n` +
+    `<p><b style="color:#00F">Thời Gian Còn Lại: ${remainingTime}</b></p>\n` +
     `           <button id="product_${
       product.id
     }" class="w3-button w3-black w3-margin-bottom" onclick="redirect(this)">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>\n` +
