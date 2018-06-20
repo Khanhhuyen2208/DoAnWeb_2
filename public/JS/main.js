@@ -1,8 +1,14 @@
-async function load () {
+async function loadIndexPage () {
   let products = await getProducts()
   ProductList(products)
   getUserInfo()
 }
+
+async function loadDetailPage () {
+  getUserInfo()
+}
+
+async function loadAdminPage () {}
 
 function getUserInfo () {
   let userName = localStorage.getItem('userName') || null
@@ -19,10 +25,11 @@ function getUserInfo () {
 
     btnDangNhap.style.display = 'none'
     btnDangKi.style.display = 'none'
-    btnDangXuat.style.display = 'inline-block'
     btnUser.innerHTML = userName
+    btnUser.style.display = 'inline-block'
+    btnDangXuat.style.display = 'inline-block'
 
-    if (isAdmin) {
+    if (isAdmin === 'true') {
       btnAdmin.style.display = 'inline-block'
     }
   }
@@ -49,7 +56,11 @@ async function ProductList (products) {
   for (let i in products) {
     let obj = products[i]
     let image = await axios.get('/api/image?product_id=' + obj.id)
-    let imageLink = image.data.data[0].image_link
+    let imageLink = image.data.data[0]
+    if (!imageLink) {
+      continue
+    }
+    imageLink = imageLink.image_link
     let product = new Product(
       obj.id,
       obj.catalog_id,

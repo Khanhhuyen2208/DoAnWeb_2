@@ -1,7 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<body onload="onLoad()">
+<head>
+  <script src="/JS/main.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+</head>
+<body onload="onLoad(); loadDetailPage()">
 <div>
   <div class="w3-top">
     <div class="w3-bar w3-black w3-card">
@@ -14,10 +21,12 @@
       <a href="/SanPham.html?catalog=3" class="w3-bar-item w3-button w3-padding-large w3-hide-small">MÁY TÍNH BẢNG</a>
       <div class="w3-dropdown-hover w3-hide-small">
         <button class="w3-padding-large w3-button" title="More">HỒ SƠ CỦA TÔI <i class="fa fa-caret-down"></i></button>
-        <div class="w3-dropdown-content w3-bar-block w3-card-4">
-          <a href="http://localhost:3001/form_dangki.html" class="w3-bar-item w3-button">ĐĂNG KÍ</a>
-          <a href="http://localhost:3001/form_dangnhap.html" class="w3-bar-item w3-button">ĐĂNG NHẬP</a>
-          <a href="#lienhe" class="w3-bar-item w3-button">LIÊN HỆ</a>
+        <div id="profile" class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a id="btn-dangki" href="/form_dangki.html" class="w3-bar-item w3-button">ĐĂNG KÍ</a>
+          <a id="btn-dangnhap" href="/form_dangnhap.html" class="w3-bar-item w3-button">ĐĂNG NHẬP</a>
+          <a id="btn-dangxuat" href="/#logout" onclick="logout()" style="display: none;" class="w3-bar-item w3-button">ĐĂNG XUẤT</a>
+          <a id="btn-admin" href="/admin.html" style="display: none;" class="w3-bar-item w3-button">ADMIN</a>
+          <a id="btn-user" href="#user" style="display: none;" class="w3-bar-item w3-button"></a>
         </div>
       </div>
       <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i
