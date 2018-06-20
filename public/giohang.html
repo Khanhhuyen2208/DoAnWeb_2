@@ -1,12 +1,52 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>  
-    <title> Quản lí đơn hàng </title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>DO AN WEB</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="/JS/main.js"></script>
 </head>
+<style>
+  body {font-family: "Lato", sans-serif}
+  .mySlides {display: none}
+</style>
+<body onload="loadProductsPage()">
+<div id="app">
 
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)"
+         onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="/" class="w3-bar-item w3-button w3-padding-large">TRANG CHỦ</a>
+      <a href="/SanPham.html" class="w3-bar-item w3-button w3-padding-large">TẤT CẢ SẢN PHẨM</a>
+      <a href="/SanPham.html?catalog=1" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ĐIỆN THOẠI</a>
+      <a href="/SanPham.html?catalog=2" class="w3-bar-item w3-button w3-padding-large w3-hide-small">LAPTOP</a>
+      <a href="/SanPham.html?catalog=3" class="w3-bar-item w3-button w3-padding-large w3-hide-small">MÁY TÍNH BẢNG</a>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <button class="w3-padding-large w3-button" title="More">HỒ SƠ CỦA TÔI <i class="fa fa-caret-down"></i></button>
+        <div id="profile" class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a id="btn-dangki" href="/form_dangki.html" class="w3-bar-item w3-button">ĐĂNG KÍ</a>
+          <a id="btn-dangnhap" href="/form_dangnhap.html" class="w3-bar-item w3-button">ĐĂNG NHẬP</a>
+          <a id="btn-dangxuat" href="/#logout" onclick="logout()" style="display: none;" class="w3-bar-item w3-button">ĐĂNG XUẤT</a>
+          <a id="btn-admin" href="/admin.html" style="display: none;" class="w3-bar-item w3-button">ADMIN</a>
+          <a id="btn-user" href="#user" style="display: none;" class="w3-bar-item w3-button"></a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
 <div class="container">
-     <div class="col-sm-6" style="display:block;">
+     <div class="col-sm-6" style="display:block;max-width:2000px;margin-top:46px">
         <div class="row" ; style="width:400px">
 
             <h2 style="background-color:Silver">THÔNG TIN KHÁCH HÀNG</h2>
@@ -22,7 +62,7 @@
             <h4> Đánh giá của bạn</h4>
         </a>
         <a href="#">
-            <h4> Thêm vào mục yêu thích</h4>
+            <h4> Số lượng bạn đã yêu thích ()</h4>
         </a>
 
 
