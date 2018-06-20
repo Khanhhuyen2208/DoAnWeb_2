@@ -6,6 +6,7 @@ function createWhereStatement (obj) {
   // Create query string
   let sql = ''
   let length = Object.keys(obj).length
+  let likekey, searchField
 
   if (obj && length) {
     let count = 0
@@ -14,15 +15,27 @@ function createWhereStatement (obj) {
         if (count === 0) {
           sql += 'WHERE'
         }
-        sql += ` \`${item}\` = '${obj[item]}'`
-        count++
-        if (count !== length) {
-          sql += ' and'
+
+        if (item === 'likekey') {
+          likekey = obj[item]
+          count++
+        } else if (item === 'searchfield') {
+          searchField = obj[item]
+          count++
+        } else {
+          sql += ` \`${item}\` = '${obj[item]}'`
+          count++
+          if (count !== length) {
+            sql += ' and'
+          }
         }
       }
     }
+    if (likekey && searchField) {
+      sql += ` \`${searchField}\` like '%${likekey}%'`
+    }
   }
-
+  console.log(sql)
   return sql
 }
 
