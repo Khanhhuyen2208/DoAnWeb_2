@@ -159,19 +159,7 @@ a[data-toggle="collapse"] {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                        <td>id</td>
-                        <td>name</td>
-                        <td>email</td>
-                        <td>pasword</td>
-                        <td>address</td>
-                        <td>phonenumber</td>
-                        <td>role</td>
-                        <td>create_at</td>
-                        <td>update_at</td>
-                        <td><button type="button" class="btn btn-info">SUMIT</button>
-                        
-                  </tr>
+                  
                  
                 </tbody>
               </table>
@@ -199,7 +187,7 @@ a[data-toggle="collapse"] {
                 tr.append("<td>" + res.data[i].role  + "</td>");
                 tr.append("<td>" + res.data[i].created_at + "</td>");
                 tr.append("<td>" + res.data[i].updated_at + "</td>");
-                tr.append("<td>" +  btn + "</td>");
+                tr.append("<td>" +  "<button >SUBMIT</button>"  + "</td>");
                 $('#myTable').append(tr);
             }
             })

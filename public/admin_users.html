@@ -172,21 +172,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>id</td>
-                        <td>name</td>
-                        <td>email</td>
-                        <td>pasword</td>
-                        <td>address</td>
-                        <td>phonenumber</td>
-                        <td>role</td>
-                        <td>create_at</td>
-                        <td>update_at</td>
-                        <td>
-                            <button type="button" class="btn btn-warning">DELETE</button>
-                            <input class="btn btn-primary" type="reset" value="Reset">
-                        </td>
-                    </tr>
+                    
 
                 </tbody>
             </table>
@@ -210,7 +196,6 @@
             url: '/api/user',
            
         }).done(function (res) {
-            console.log(res)
             var btn = document.createElement("BUTTON");
             var deleteUser = document.createTextNode("Delete");
             var reset = document.createTextNode("ResetPass");
@@ -226,10 +211,22 @@
             tr.append("<td>" + res.data[i].role  + "</td>");
             tr.append("<td>" + res.data[i].created_at + "</td>");
             tr.append("<td>" + res.data[i].updated_at + "</td>");
-            tr.append("<td>" +  btn + "</td>");
+            tr.append("<td>" +  "<button onclick=deleteUser(" + res.data[i].id + ")>DELETE</button>" +"<button >Reset</button>" + "</td>");
             $('#myTable').append(tr);
         }
         })
+
+        function deleteUser(id) {
+            console.log(id)
+            $.ajax({
+                url: "/api/user/"+id,
+                type: 'DELETE',
+                success: function (res) {
+                    alert('xoá thành công')
+                    window.location.href = 'http://localhost:3001/admin_users.html'
+                }
+            })
+        }
         
     </script>
 </body>
