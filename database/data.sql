@@ -133,6 +133,21 @@ INSERT INTO images(`product_id`,`image_link`) VALUES (12,'http://www.kimhengcent
 INSERT INTO images(`product_id`,`image_link`) VALUES (13,'https://cdn3.tgdd.vn/Products/Images/522/101993/ipad-mini-4-wifi-128gb-321-400x400.jpg');
 INSERT INTO images(`product_id`,`image_link`) VALUES (14,'http://d2pa5gi5n2e1an.cloudfront.net/global/images/product/tablets/ASUS_MeMO_Pad/ASUS_MeMO_Pad_L_1.jpg');
 INSERT INTO images(`product_id`,`image_link`) VALUES (15,'https://www.naijatechguide.com/wp-content/uploads/2017/07/huawei-mediapad-m3-featured.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (16,'https://znews-photo-td.zadn.vn/w660/Uploaded/rik_rdcvcvwt_wc/2017_03_23/ipd1_1.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (17,'http://ttnn.com.vn/wp-content/uploads/img_5458539bb7955.png');
+INSERT INTO images(`product_id`,`image_link`) VALUES (18,'https://cdn-gd-v1.webbnc.net/useruploads/userfiles//510277/images/3-cach-ket-noi-iphone-voi-tivi-1.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (19,'http://phukiendexinh.com/uploads/images/acer/B1-730/bao-da-Acer-Iconia-One-7-B1-7303.JPG');
+INSERT INTO images(`product_id`,`image_link`) VALUES (20,'https://laptopg7.vn/images/companies/1/Image%20laptop/Acer/Acer%20Aspire%20Switch%2010-01.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (21,'https://laptopg7.vn/images/companies/1/Image%20laptop/Acer/Acer%20Aspire%20Switch%2010-01.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (22,'http://ttnn.com.vn/wp-content/uploads/img_5458539bb7955.png');
+INSERT INTO images(`product_id`,`image_link`) VALUES (23,'https://cdn-gd-v1.webbnc.net/useruploads/userfiles//510277/images/3-cach-ket-noi-iphone-voi-tivi-1.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (24,'http://phukiendexinh.com/uploads/images/acer/B1-730/bao-da-Acer-Iconia-One-7-B1-7303.JPG');
+INSERT INTO images(`product_id`,`image_link`) VALUES (25,'https://laptopg7.vn/images/companies/1/Image%20laptop/Acer/Acer%20Aspire%20Switch%2010-01.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (26,'https://laptopg7.vn/images/companies/1/Image%20laptop/Acer/Acer%20Aspire%20Switch%2010-01.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (27,'https://www.jbhifi.com.au/FileLibrary/ProductResources/Images/223284-L-LO.jpg');
+
+
+
 
 INSERT INTO auctions (`product_id`,`user_id`) VALUES (1,5 );
 INSERT INTO auctions (`product_id`,`user_id`) VALUES (2,6);
