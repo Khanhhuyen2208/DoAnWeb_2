@@ -8,91 +8,91 @@ INSERT INTO catalogs (`name`,`type_id`)
         VALUES ('máy tính bảng',3);
 
 INSERT INTO products  (`name`,`catalog_id`,`price`,`starting_price`,`step_cost`,`is_auto_renew`,`content`,`discount`,`views`,`producer`,`seller_id`,`start_at`,`expire_at` )
-     VALUES ('SamSung galaxy J3', 1,3000000,3500000,100000,3600000,'Màn hình Supper AMOLED, Camera sau: 13 MP,Camera trước: 8 MP, Bộ nhớ trong: 32GB,Ram: 3GB',10,0,'SamSung',1,'2018-06-06 12:00:00','2018-06-12 12:00:00');
+     VALUES ('SamSung galaxy J3', 1,3000000,500000,100000,3600000,'Màn hình Supper AMOLED, Camera sau: 13 MP,Camera trước: 8 MP, Bộ nhớ trong: 32GB,Ram: 3GB',10,0,'SamSung',1,'2018-06-06 12:00:00','2018-06-12 12:00:00');
 INSERT INTO products   (`name`,`catalog_id`,`price`,`starting_price`,`step_cost`,`is_auto_renew`,`content`,`discount`,`views`,`producer`,`seller_id`,`start_at`,`expire_at` )
-     VALUES ('SamSung galaxy J4', 1,5000000,5500000,100000,5600000,'Màn hình Supper AMOLED, Camera sau: 13 MP,Camera trước: 5 MP, Bộ nhớ trong: 16GB,Ram: 2GB',10,0,'SamSung',2,'2018-07-06 12:00:00','2018-07-12 12:00:00');
+     VALUES ('SamSung galaxy J4', 1,5000000,500000,100000,5600000,'Màn hình Supper AMOLED, Camera sau: 13 MP,Camera trước: 5 MP, Bộ nhớ trong: 16GB,Ram: 2GB',10,0,'SamSung',2,'2018-07-06 12:00:00','2018-07-12 12:00:00');
 INSERT INTO products   (`name`,`catalog_id`,`price`,`starting_price`,`step_cost`,`is_auto_renew`,`content`,`discount`,`views`,`producer`,`seller_id`,`start_at`,`expire_at` )
-     VALUES ('SamSung galaxy J7 Pro', 1,6000000,6500000,100000,6600000,'Màn hình Supper AMOLED, Camera sau: 13 MP,Camera trước: 13 MP, Bộ nhớ trong: 32GB,Ram: 3GB',10,0,'SamSung',3,'2018-08-06 12:00:00','2018-08-12 12:00:00');
+     VALUES ('SamSung galaxy J7 Pro', 1,6000000,500000,100000,6600000,'Màn hình Supper AMOLED, Camera sau: 13 MP,Camera trước: 13 MP, Bộ nhớ trong: 32GB,Ram: 3GB',10,0,'SamSung',3,'2018-08-06 12:00:00','2018-08-12 12:00:00');
 INSERT INTO products   (`name`,`catalog_id`,`price`,`starting_price`,`step_cost`,`is_auto_renew`,`content`,`discount`,`views`,`producer`,`seller_id`,`start_at`,`expire_at` )
-     VALUES ('Iphone 6', 1,6000000,6500000,100000,6600000,'Màn hình Supper AMOLED, Camera sau: 8 MP,Camera trước: 1.3 MP, Bộ nhớ trong: 32GB,Ram: 1 GB',10,0,'Iphone',1,'2018-06-13 12:00:00','2018-06-20 12:00:00');
+     VALUES ('Iphone 6', 1,6000000,500000,100000,6600000,'Màn hình Supper AMOLED, Camera sau: 8 MP,Camera trước: 1.3 MP, Bộ nhớ trong: 32GB,Ram: 1 GB',10,0,'Iphone',1,'2018-06-13 12:00:00','2018-06-20 12:00:00');
 
 INSERT INTO products   (`name`,`catalog_id`,`price`,`starting_price`,`step_cost`,`is_auto_renew`,`content`,`discount`,`views`,`producer`,`seller_id`,`start_at`,`expire_at` )
-     VALUES ('Iphone 7', 1,8000000,8500000,100000,8600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 32GB,Ram: 4 GB',10,0,'Iphone',2,'2018-07-13 12:00:00','2018-07-20 12:00:00');
+     VALUES ('Iphone 7', 1,8000000,500000,100000,8600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 32GB,Ram: 4 GB',10,0,'Iphone',2,'2018-07-13 12:00:00','2018-07-20 12:00:00');
 
 INSERT INTO products   (`name`,`catalog_id`,`price`,`starting_price`,`step_cost`,`is_auto_renew`,`content`,`discount`,`views`,`producer`,`seller_id`,`start_at`,`expire_at` )
-     VALUES ('Iphone 8', 1,10000000,10500000,100000,10600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-08-13 12:00:00','2018-08-20 12:00:00');
-
-
-INSERT INTO products   (`name`,`catalog_id`,`price`,`starting_price`,`step_cost`,`is_auto_renew`,`content`,`discount`,`views`,`producer`,`seller_id`,`start_at`,`expire_at` )
-     VALUES ('Oppo F5', 1,6000000,6500000,100000,6600000,'Màn hình Supper AMOLED, Camera sau: 16 MP,Camera trước: 20 MP, Bộ nhớ trong: 64GB,Ram: 6 GB',10,0,'Oppo',1,'2018-06-21 12:00:00','2018-06-28 12:00:00');
-INSERT INTO products   (`name`,`catalog_id`,`price`,`starting_price`,`step_cost`,`is_auto_renew`,`content`,`discount`,`views`,`producer`,`seller_id`,`start_at`,`expire_at` )
-     VALUES ('oppo F7', 1,8000000,8500000,100000,8600000,'Màn hình Supper AMOLED, Camera sau: 16 MP,Camera trước: 25 MP, Bộ nhớ trong: 128GB,Ram: 6 GB',10,0,'oppo',2,'2018-07-21 12:00:00','2018-07-28 12:00:00');
-INSERT INTO products   (`name`,`catalog_id`,`price`,`starting_price`,`step_cost`,`is_auto_renew`,`content`,`discount`,`views`,`producer`,`seller_id`,`start_at`,`expire_at` )
-     VALUES ('oppo A83', 1,10000000,10500000,100000,10600000,'Màn hình Supper AMOLED, Camera sau: 13 MP,Camera trước: 8 MP, Bộ nhớ trong: 16GB,Ram: 2 GB',10,0,'oppo',3,'2018-08-21 12:00:00','2018-06-28 12:00:00');
-
-INSERT INTO products   (`name`,`catalog_id`,`price`,`starting_price`,`step_cost`,`is_auto_renew`,`content`,`discount`,`views`,`producer`,`seller_id`,`start_at`,`expire_at` )
-        VALUES ('DELL', 2,10000000,10500000,100000,10600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-08-13 12:00:00','2018-08-20 12:00:00');
-INSERT INTO products   (`name`,`catalog_id`,`price`,`starting_price`,`step_cost`,`is_auto_renew`,`content`,`discount`,`views`,`producer`,`seller_id`,`start_at`,`expire_at` )
-        VALUES ('ACER', 2,10000000,10500000,100000,10600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-06-20 12:00:00','2018-06-28 12:00:00');
-INSERT INTO products   (`name`,`catalog_id`,`price`,`starting_price`,`step_cost`,`is_auto_renew`,`content`,`discount`,`views`,`producer`,`seller_id`,`start_at`,`expire_at` )
-        VALUES ('lenovo', 2,10000000,10500000,100000,10600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-07-06 12:00:00','2018-06-12 12:00:00');
-
+     VALUES ('Iphone 8', 1,10000000,500000,100000,10600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-08-13 12:00:00','2018-08-20 12:00:00');
 
 
 INSERT INTO products   (`name`,`catalog_id`,`price`,`starting_price`,`step_cost`,`is_auto_renew`,`content`,`discount`,`views`,`producer`,`seller_id`,`start_at`,`expire_at` )
-        VALUES ('ASUS', 2,10000000,10500000,100000,10600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-08-13 12:00:00','2018-08-20 12:00:00');
+     VALUES ('Oppo F5', 1,6000000,500000,100000,6600000,'Màn hình Supper AMOLED, Camera sau: 16 MP,Camera trước: 20 MP, Bộ nhớ trong: 64GB,Ram: 6 GB',10,0,'Oppo',1,'2018-06-21 12:00:00','2018-06-28 12:00:00');
 INSERT INTO products   (`name`,`catalog_id`,`price`,`starting_price`,`step_cost`,`is_auto_renew`,`content`,`discount`,`views`,`producer`,`seller_id`,`start_at`,`expire_at` )
-        VALUES ('ASUS', 2,8000000,8500000,100000,8600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-08-13 12:00:00','2018-08-20 12:00:00');
+     VALUES ('oppo F7', 1,8000000,500000,100000,8600000,'Màn hình Supper AMOLED, Camera sau: 16 MP,Camera trước: 25 MP, Bộ nhớ trong: 128GB,Ram: 6 GB',10,0,'oppo',2,'2018-07-21 12:00:00','2018-07-28 12:00:00');
 INSERT INTO products   (`name`,`catalog_id`,`price`,`starting_price`,`step_cost`,`is_auto_renew`,`content`,`discount`,`views`,`producer`,`seller_id`,`start_at`,`expire_at` )
-        VALUES ('ASUS', 2,10000000,10500000,100000,10600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-08-13 12:00:00','2018-08-20 12:00:00');
+     VALUES ('oppo A83', 1,10000000,500000,100000,10600000,'Màn hình Supper AMOLED, Camera sau: 13 MP,Camera trước: 8 MP, Bộ nhớ trong: 16GB,Ram: 2 GB',10,0,'oppo',3,'2018-08-21 12:00:00','2018-06-28 12:00:00');
 
-
-
+INSERT INTO products   (`name`,`catalog_id`,`price`,`starting_price`,`step_cost`,`is_auto_renew`,`content`,`discount`,`views`,`producer`,`seller_id`,`start_at`,`expire_at` )
+        VALUES ('DELL', 2,10000000,500000,100000,10600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-08-13 12:00:00','2018-08-20 12:00:00');
+INSERT INTO products   (`name`,`catalog_id`,`price`,`starting_price`,`step_cost`,`is_auto_renew`,`content`,`discount`,`views`,`producer`,`seller_id`,`start_at`,`expire_at` )
+        VALUES ('ACER', 2,10000000,500000,100000,10600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-06-20 12:00:00','2018-06-28 12:00:00');
+INSERT INTO products   (`name`,`catalog_id`,`price`,`starting_price`,`step_cost`,`is_auto_renew`,`content`,`discount`,`views`,`producer`,`seller_id`,`start_at`,`expire_at` )
+        VALUES ('lenovo', 2,10000000,500000,100000,10600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-07-06 12:00:00','2018-06-12 12:00:00');
 
 
 
 INSERT INTO products   (`name`,`catalog_id`,`price`,`starting_price`,`step_cost`,`is_auto_renew`,`content`,`discount`,`views`,`producer`,`seller_id`,`start_at`,`expire_at` )
-        VALUES ('MACBOOK', 2,40000000,40500000,100000,40600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-08-13 12:00:00','2018-08-20 12:00:00');
+        VALUES ('ASUS', 2,10000000,500000,100000,10600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-08-13 12:00:00','2018-08-20 12:00:00');
 INSERT INTO products   (`name`,`catalog_id`,`price`,`starting_price`,`step_cost`,`is_auto_renew`,`content`,`discount`,`views`,`producer`,`seller_id`,`start_at`,`expire_at` )
-        VALUES ('MACBOOK', 2,45000000,35500000,100000,45600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-06-06 12:00:00','2018-08-13 12:00:00');
+        VALUES ('ASUS', 2,8000000,500000,100000,8600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-08-13 12:00:00','2018-08-20 12:00:00');
 INSERT INTO products   (`name`,`catalog_id`,`price`,`starting_price`,`step_cost`,`is_auto_renew`,`content`,`discount`,`views`,`producer`,`seller_id`,`start_at`,`expire_at` )
-        VALUES ('MACBOOK', 2,30000000,30500000,100000,30600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-07-13 12:00:00','2018-08-20 12:00:00');
+        VALUES ('ASUS', 2,10000000,500000,100000,10600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-08-13 12:00:00','2018-08-20 12:00:00');
+
 
 
 
 
 
 INSERT INTO products   (`name`,`catalog_id`,`price`,`starting_price`,`step_cost`,`is_auto_renew`,`content`,`discount`,`views`,`producer`,`seller_id`,`start_at`,`expire_at` )
-        VALUES ('iPad', 3,10000000,10500000,100000,10600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-08-13 12:00:00','2018-08-20 12:00:00');
-
+        VALUES ('MACBOOK', 2,40000000,500000,100000,40600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-08-13 12:00:00','2018-08-20 12:00:00');
 INSERT INTO products   (`name`,`catalog_id`,`price`,`starting_price`,`step_cost`,`is_auto_renew`,`content`,`discount`,`views`,`producer`,`seller_id`,`start_at`,`expire_at` )
-        VALUES (' ipad 9.7 inch', 3,15000000,15500000,100000,15600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-07-13 12:00:00','2018-08-20 12:00:00');
-
+        VALUES ('MACBOOK', 2,45000000,500000,100000,45600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-06-06 12:00:00','2018-08-13 12:00:00');
 INSERT INTO products   (`name`,`catalog_id`,`price`,`starting_price`,`step_cost`,`is_auto_renew`,`content`,`discount`,`views`,`producer`,`seller_id`,`start_at`,`expire_at` )
-        VALUES (' ipad 10 inch', 3,25000000,25500000,100000,25600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-06-06 12:00:00','2018-08-12 12:00:00');
+        VALUES ('MACBOOK', 2,30000000,500000,100000,30600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-07-13 12:00:00','2018-08-20 12:00:00');
 
 
 
 
 
 INSERT INTO products   (`name`,`catalog_id`,`price`,`starting_price`,`step_cost`,`is_auto_renew`,`content`,`discount`,`views`,`producer`,`seller_id`,`start_at`,`expire_at` )
-        VALUES ('ASUS SonicMaster 1', 3,40000000,40500000,100000,40600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-08-13 12:00:00','2018-08-20 12:00:00');
+        VALUES ('iPad', 3,10000000,500000,100000,10600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-08-13 12:00:00','2018-08-20 12:00:00');
 
 INSERT INTO products   (`name`,`catalog_id`,`price`,`starting_price`,`step_cost`,`is_auto_renew`,`content`,`discount`,`views`,`producer`,`seller_id`,`start_at`,`expire_at` )
-        VALUES ('ASUS SonicMaster 2', 3,30000000,30500000,100000,30600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-07-20 12:00:00','2018-07-28 12:00:00');
+        VALUES (' ipad 9.7 inch', 3,15000000,5500000,100000,15600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-07-13 12:00:00','2018-08-20 12:00:00');
 
 INSERT INTO products   (`name`,`catalog_id`,`price`,`starting_price`,`step_cost`,`is_auto_renew`,`content`,`discount`,`views`,`producer`,`seller_id`,`start_at`,`expire_at` )
-        VALUES ('ASUS SonicMaster 3', 3,20000000,20500000,100000,20600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-06-06 12:00:00','2018-06-12 12:00:00');
+        VALUES (' ipad 10 inch', 3,25000000,5500000,100000,25600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-06-06 12:00:00','2018-08-12 12:00:00');
+
+
 
 
 
 INSERT INTO products   (`name`,`catalog_id`,`price`,`starting_price`,`step_cost`,`is_auto_renew`,`content`,`discount`,`views`,`producer`,`seller_id`,`start_at`,`expire_at` )
-        VALUES (' Huawei Media pad M3', 3,10000000,10500000,100000,10600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-08-13 12:00:00','2018-08-20 12:00:00');
-INSERT INTO products   (`name`,`catalog_id`,`price`,`starting_price`,`step_cost`,`is_auto_renew`,`content`,`discount`,`views`,`producer`,`seller_id`,`start_at`,`expire_at` )
-        VALUES ('Huawei Media pad M2', 3,30000000,30500000,100000,30600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-07-20 12:00:00','2018-07-28 12:00:00');
+        VALUES ('ASUS SonicMaster 1', 3,40000000,500000,100000,40600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-08-13 12:00:00','2018-08-20 12:00:00');
 
 INSERT INTO products   (`name`,`catalog_id`,`price`,`starting_price`,`step_cost`,`is_auto_renew`,`content`,`discount`,`views`,`producer`,`seller_id`,`start_at`,`expire_at` )
-        VALUES ('Huawei Media pad M1', 3,20000000,20500000,100000,20600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-06-06 12:00:00','2018-06-12 12:00:00');
+        VALUES ('ASUS SonicMaster 2', 3,30000000,500000,100000,30600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-07-20 12:00:00','2018-07-28 12:00:00');
+
+INSERT INTO products   (`name`,`catalog_id`,`price`,`starting_price`,`step_cost`,`is_auto_renew`,`content`,`discount`,`views`,`producer`,`seller_id`,`start_at`,`expire_at` )
+        VALUES ('ASUS SonicMaster 3', 3,20000000,500000,100000,20600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-06-06 12:00:00','2018-06-12 12:00:00');
+
+
+
+INSERT INTO products   (`name`,`catalog_id`,`price`,`starting_price`,`step_cost`,`is_auto_renew`,`content`,`discount`,`views`,`producer`,`seller_id`,`start_at`,`expire_at` )
+        VALUES (' Huawei Media pad M3', 3,10000000,500000,100000,10600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-08-13 12:00:00','2018-08-20 12:00:00');
+INSERT INTO products   (`name`,`catalog_id`,`price`,`starting_price`,`step_cost`,`is_auto_renew`,`content`,`discount`,`views`,`producer`,`seller_id`,`start_at`,`expire_at` )
+        VALUES ('Huawei Media pad M2', 3,30000000,500000,100000,30600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-07-20 12:00:00','2018-07-28 12:00:00');
+
+INSERT INTO products   (`name`,`catalog_id`,`price`,`starting_price`,`step_cost`,`is_auto_renew`,`content`,`discount`,`views`,`producer`,`seller_id`,`start_at`,`expire_at` )
+        VALUES ('Huawei Media pad M1', 3,20000000,500000,100000,20600000,'Màn hình Supper AMOLED, Camera sau: 12 MP,Camera trước: 7 MP, Bộ nhớ trong: 64GB,Ram: 2 GB',10,0,'Iphone',2,'2018-06-06 12:00:00','2018-06-12 12:00:00');
 
 
 INSERT INTO users(`name`,`email`,`password`,`address`,`phone_number`,`role`) 

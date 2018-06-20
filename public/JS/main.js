@@ -1,6 +1,38 @@
 async function load () {
   let products = await getProducts()
   ProductList(products)
+  getUserInfo()
+}
+
+function getUserInfo () {
+  let userName = localStorage.getItem('userName') || null
+  let userId = localStorage.getItem('userId') || null
+  let email = localStorage.getItem('email') || null
+  let isAdmin = localStorage.getItem('isAdmin') || null
+
+  if (userId && userName && email) {
+    let btnDangNhap = document.getElementById('btn-dangnhap')
+    let btnDangKi = document.getElementById('btn-dangki')
+    let btnDangXuat = document.getElementById('btn-dangxuat')
+    let btnAdmin = document.getElementById('btn-admin')
+    let btnUser = document.getElementById('btn-user')
+
+    btnDangNhap.style.display = 'none'
+    btnDangKi.style.display = 'none'
+    btnDangXuat.style.display = 'inline-block'
+    btnUser.innerHTML = userName
+
+    if (isAdmin) {
+      btnAdmin.style.display = 'inline-block'
+    }
+  }
+}
+
+function logout () {
+  localStorage.removeItem('userName')
+  localStorage.removeItem('userId')
+  localStorage.removeItem('email')
+  localStorage.removeItem('isAdmin')
 }
 
 function Product (id, catalog_id, name, initPrice, currentPrice, image) {
@@ -44,6 +76,11 @@ function getProducts () {
   })
 }
 
+function redirect (el) {
+  let id = el.id.split('_').pop()
+  window.location.href = '/ChiTietSanPham.html?product_id=' + id
+}
+
 function renderProduct (product) {
   return (
     '<div class="w3-third">\n' +
@@ -54,7 +91,9 @@ function renderProduct (product) {
     `        <p><b style="color:#f00">GIÁ KHỞI ĐIỂM : ${
       product.initPrice
     }</b></p>\n` +
-    '           <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById(\'ticketModal\').style.display=\'block\'">ĐẤU GIÁ</button>\n' +
+    `           <button id="product_${
+      product.id
+    }" class="w3-button w3-black w3-margin-bottom" onclick="redirect(this)">ĐẤU GIÁ</button>\n` +
     '      </div>'
   )
 }

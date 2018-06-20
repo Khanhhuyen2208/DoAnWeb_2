@@ -13,13 +13,16 @@ function kiem_tra_dang_nhap () {
     email: ten_dang_nhap,
     password: mat_khau
   }
-  console.log(body)
+
   $.ajax({
     url: '/auth/login',
     method: 'POST',
     data: body,
     success: function (res) {
-      console.log('ahihi')
+      localStorage.setItem('userId', res.id)
+      localStorage.setItem('userName', res.name)
+      localStorage.setItem('email', res.email)
+      localStorage.setItem('isAdmin', res.isAdmin)
       window.location.href = 'http://localhost:3001/index.html'
     }
   }).fail(function () {
