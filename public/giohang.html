@@ -1,7 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <title>DO AN WEB</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,10 +17,15 @@
   <script src="/JS/main.js"></script>
 </head>
 <style>
-  body {font-family: "Lato", sans-serif}
-  .mySlides {display: none}
+  body {
+    font-family: "Lato", sans-serif
+  }
+
+  .mySlides {
+    display: none
+  }
 </style>
-<body onload="loadProductsPage()">
+<body onload="loadDetailPage(); loadQuanLyHoSo();">
 <div id="app">
 
   <!-- Navbar -->
@@ -27,145 +33,137 @@
     <div class="w3-bar w3-black w3-card">
       <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)"
          onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <marquee style="color:#FF0;font-family:Verdana, Geneva, sans-serif;font-size:18px;font-weight:bold">ĐẤUGIÁNHANH.COM</marquee>
       <a href="/" class="w3-bar-item w3-button w3-padding-large">TRANG CHỦ</a>
       <a href="/SanPham.html" class="w3-bar-item w3-button w3-padding-large">TẤT CẢ SẢN PHẨM</a>
       <a href="/SanPham.html?catalog=1" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ĐIỆN THOẠI</a>
       <a href="/SanPham.html?catalog=2" class="w3-bar-item w3-button w3-padding-large w3-hide-small">LAPTOP</a>
       <a href="/SanPham.html?catalog=3" class="w3-bar-item w3-button w3-padding-large w3-hide-small">MÁY TÍNH BẢNG</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Yêu Thích</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Đang Đấu Giá</a>
+      <a href="/giohang.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Đã Thắng</a>
       <div class="w3-dropdown-hover w3-hide-small">
         <button class="w3-padding-large w3-button" title="More">HỒ SƠ CỦA TÔI <i class="fa fa-caret-down"></i></button>
         <div id="profile" class="w3-dropdown-content w3-bar-block w3-card-4">
           <a id="btn-dangki" href="/form_dangki.html" class="w3-bar-item w3-button">ĐĂNG KÍ</a>
           <a id="btn-dangnhap" href="/form_dangnhap.html" class="w3-bar-item w3-button">ĐĂNG NHẬP</a>
           <a id="btn-dangxuat" href="/#logout" onclick="logout()" style="display: none;" class="w3-bar-item w3-button">ĐĂNG XUẤT</a>
-          <a id="btn-admin" href="/admin.html" style="display: none;" class="w3-bar-item w3-button">ADMIN</a>
-          <a id="btn-user" href="#user" style="display: none;" class="w3-bar-item w3-button"></a>
+          <a id="btn-admin" href="/admin_users.html" onclick="admin()" style="display: none;" class="w3-bar-item w3-button">ADMIN</a>
+          <a id="btn-user" href="/quanlyHoSoCaNhan.html" style="display: none;" class="w3-bar-item w3-button"></a>
         </div>
       </div>
-      
+      <a href="#" class="w3-padding-large w3-hover-red w3-hide-small w3-right">
+        <form action="#" name="formTimKiem" id="formTimKiem">
+          <!--<input type="text" placeholder="Tìm Kiếm.." name="txtTimKiem" id="txtTimKiem">-->
+          <button type="button" name="btnTimKiem" id="btnTimKiem"><i class="fa fa-search"></i></button>
+        </form>
+      </a>
     </div>
   </div>
-<div class="container">
-     <div class="col-sm-6" style="display:block;max-width:2000px;margin-top:46px; text-align:center">
-        <div class="row" ; style="width:400px;">
 
-            <h2 style="background-color:Silver; text-align:center">THÔNG TIN KHÁCH HÀNG</h2>
-        </div>
+  <div class="container" style="margin-top: 100px;">
+    <div class="col-sm-6" style="display:block;max-width:2000px;margin-top:46px; text-align:center">
+      <div class="row" ; style="width:400px;">
 
-        <div class="control-group">
-                <label for="sao">Tên Khách Hàng:</label>
-                <div class="col-3">
-                  <input type="text" value="" id="Name" placeholder="Tên Khách Hàng" style="width:650px; height:30px" disabled/>
-                </div>
-        </div>
-        <div class="control-group">
-                <label for="sao">Số Điện Thoại:</label>
-                <div class="col-3">
-                  <input type="text" value="" id="SDT" placeholder="Số Điện Thoại" style="width:650px; height:30px" disabled/>
-                </div>
-        </div>
-        <div class="control-group">
-                <label for="sao">Đánh Giá Sản Phẩm:</label>
-                <div class="col-3">
-                  <input type="text" value="" id="SaoSanPham" placeholder="Đánh Giá Sản Phẩm" style="width:650px; height:30px" disabled/>
-                </div>
-        </div>
-        <div class="control-group">
-                <label for="sao">Đánh Giá Người Bán:</label>
-                <div class="col-3">
-                  <input type="text" value="" id="SaoNguoiBan" placeholder="Đánh Giá Người Bán" style="width:650px; height:30px" disabled/>
-                </div>
-        </div>
-        
-        <div class="control-group">
-                <label for="sao">Số Lượng Bạn Đã Yêu Thích:</label>
-                <div class="col-3">
-                  <input type="text" value="" id="SaoYeuThich" placeholder="Lượt Yêu Thích" style="width:650px; height:30px" disabled/>
-                </div>
-        </div>
+        <h2 style="background-color:Silver; text-align:center">THÔNG TIN KHÁCH HÀNG</h2>
+      </div>
 
-        <a href="#">
-                <h4> Những sản phẩm bạn đã yêu thích</h4>
-            </a>
+      <div class="control-group">
+        <label for="sao">Tên Khách Hàng:</label>
+        <div class="col-3">
+          <input type="text" value="" id="ten" placeholder="Tên Khách Hàng" style="width:650px; height:30px" disabled/>
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="sao">Số Điện Thoại:</label>
+        <div class="col-3">
+          <input type="text" value="" id="phone" placeholder="Số Điện Thoại" style="width:650px; height:30px" disabled/>
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="email">Email:</label>
+        <div class="col-3">
+          <input type="text" value="" id="email" placeholder="Email" style="width:650px; height:30px"
+                 disabled/>
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="address">Address:</label>
+        <div class="col-3">
+          <input type="text" value="" id="address" placeholder="Address" style="width:650px; height:30px"
+                 disabled/>
+        </div>
+      </div>
+
+      <a href="#">
+        <h4> Những sản phẩm bạn đã mua</h4>
+      </a>
     </div>
-</div>
-<hr>
+  </div>
+  <hr>
 
-<div style="color:rgb(211, 32, 32);text-align:center">
+  <div style="color:rgb(211, 32, 32);text-align:center">
     <h1>QUẢN LÍ ĐƠN HÀNG</h1>
-    
+
+  </div>
 </div>
 </div>
+
+
+<div id="parent" class="transaction-size1">
+
 </div>
+<script>
+  function loadQuanLyHoSo() {
+    let id = Number(localStorage.getItem('userId') || 0)
+    if (id) {
+      axios.get('/api/user/' + id)
+        .then(res => {
+          $('#ten').val(res.data[0].name)
+          $('#email').val(res.data[0].email)
+          $('#address').val(res.data[0].address)
+          $('#phone').val(res.data[0].phone_number)
+        })
 
+      renderTransactions(id)
+    }
+  }
 
+  function Transaction(id, name, amount, image_link) {
+    this.id = id
+    this.name = name
+    this.amount = amount
+    this.image_link = image_link
+  }
 
-<div class="transaction-size1">
-    
-    <div  style="  border: 2px solid gray; height: 400px;
-    width: 20%; margin-left: 70px;float:left; margin-top: 25px;" class="transaction-size" style="padding: 100px;">
-        <p>Mã đơn hàng: </p>
-        <img class="transaction" src="https://cdn.tgdd.vn/Products/Images/42/73908/samsung-galaxy-j3-2-400x460.png" style="height: 120px;width:95px">
-        <p> Điện Thoại Galaxy </p>
-        <p> Số lượng </p>
-        <p>Thời gian giao hàng</p>
-        <p>Tổng tiền</p>
+  async function renderTransactions(userId) {
+    let transactions = await axios.get('/api/winner?user_id=' + userId)
+    transactions = transactions.data.data
+    for(let i in transactions) {
+      let product = await axios.get('/api/product/' + transactions[i].product_id)
+      let image = await axios.get('/api/image?product_id=' + transactions[i].product_id)
+      product = product.data[0]
+      image = image.data.data[0]
+      let transaction = new Transaction(transactions[i].id, product.name, product.price, image.image_link)
+      $('#parent').append(renderTransaction(transaction))
+    }
+  }
 
-        <button style=" margin-left: 80px" type="button" class="btn btn-success">THANH TOÁN  </button>
-    
-    </div>
-
-    <div  style="  border: 2px solid gray; height: 400px;
-    width: 20%; margin-left: 70px;float: left; margin-top: 25px;" class="transaction-size" style="padding: 100px;">
-        <p>Mã đơn hàng: </p>
-        <img class="transaction" src="https://cdn.tgdd.vn/Products/Images/42/73908/samsung-galaxy-j3-2-400x460.png" style="height: 120px;width:95px">
-        <p> Điện Thoại Galaxy </p>
-        <p> Số lượng </p>
-        <p>Thời gian giao hàng</p>
-        <p>Tổng tiền</p>
-
-        <button style=" margin-left: 80px" type="button" class="btn btn-success">THANH TOÁN  </button>
-    
-    </div>
-    
-    <div style=" border: 2px solid gray; height: 400px;
-    width: 20%; margin-left: 70px;float:left; margin-top: 25px;" class="transaction-size" style="padding: 100px;">
-        <br>
-        <p>Mã đơn hàng: </p>
-        <img class="transaction" src="https://www.proandroid.com/wp-content/uploads/2018/02/Galaxy-j3-dorado.jpg" style="height: 120px;width:95px" />
-        <p> Điện Thoại Galaxy </p>
-        <p> Số lượng </p>
-        <p>Thời gian giao hàng</p>
-        <p>Tổng tiền</p>
-        <button style=" margin-left: 80px" type="button" class="btn btn-success">THANH TOÁN </button>
-   </div>
-    <div style=" border: 2px solid gray; height: 400px;
-    width: 20%; margin-left: 70px;float:left; margin-top: 25px;" class="transaction-size" style="padding: 100px;">
-        <p>Mã đơn hàng: </p>
-        <img class="transaction" src="https://cdn2.gsmarena.com/vv/pics/oppo/oppo-f7-cph1819-1.jpg" style="height:120px;width: 95px" />
-       <p> Điện Thoại Galaxy </p>
-       <p> Số lượng </p>
-        <p>Thời gian giao hàng</p>
-       <p>Tổng tiền</p>
-       
-       <button style=" margin-left: 80px" type="button" class="btn btn-success">THANH TOÁN </button>
-  </div>  
-</div>
-<div class="transaction-size1">
-    <br>
-    <div style=" border: 2px solid gray; height: 400px;
-    width: 20%; margin-left: 70px;float:left; margin-top: 25px;" class="transaction-size"style="padding: 100px;">
-        <br>
-        <p>Mã đơn hàng: </p>
-        <img class="transaction" src="https://gadgetsdukaan.com/8368-large_default/apple-macbook-pro-core-i7-16gb-256gb-touch-bar-mptu2hna-15-inch-28ghz-radeon-pro-555-with-2gb-of-gddr5.jpg" style="height: 120px;width:95px" />
-        <p> Điện Thoại Galaxy </p>
-        <p> Số lượng </p>
-        <p>Thời gian giao hàng</p>
-        <p>Tổng tiền</p>
-        <button style="margin-left: 80px" type="button" class="btn btn-success">THANH TOÁN </button>
-        
-    </div>
-    </div>
-</div>
+  function renderTransaction(transaction) {
+    return (
+      '  <div style=" border: 2px solid gray; height: 400px;\n' +
+      '    width: 20%; margin-left: 70px;float:left; margin-top: 25px;" class="transaction-size" style="padding: 100px;">\n' +
+      '    <br>\n' +
+      `    <p>Mã đơn hàng: ${transaction.id}</p>\n` +
+      '    <img class="transaction"\n' +
+      `         src="${transaction.image_link}"\n` +
+      '         style="height: 120px;width:95px"/>\n' +
+      `    <p>Tên: ${transaction.name}</p>\n` +
+      `    <p>Tổng tiền: ${transaction.amount}</p>\n` +
+      '    <button style="margin-left: 80px" type="button" class="btn btn-success">THANH TOÁN</button>\n' +
+      '\n' +
+      '  </div>')
+  }
+</script>
 </body>
 </html>

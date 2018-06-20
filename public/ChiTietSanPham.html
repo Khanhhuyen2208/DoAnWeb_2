@@ -20,18 +20,25 @@
       <a href="/SanPham.html?catalog=1" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ĐIỆN THOẠI</a>
       <a href="/SanPham.html?catalog=2" class="w3-bar-item w3-button w3-padding-large w3-hide-small">LAPTOP</a>
       <a href="/SanPham.html?catalog=3" class="w3-bar-item w3-button w3-padding-large w3-hide-small">MÁY TÍNH BẢNG</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Yêu Thích</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Đang Đấu Giá</a>
+      <a href="/giohang.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Đã Thắng</a>
       <div class="w3-dropdown-hover w3-hide-small">
         <button class="w3-padding-large w3-button" title="More">HỒ SƠ CỦA TÔI <i class="fa fa-caret-down"></i></button>
         <div id="profile" class="w3-dropdown-content w3-bar-block w3-card-4">
           <a id="btn-dangki" href="/form_dangki.html" class="w3-bar-item w3-button">ĐĂNG KÍ</a>
           <a id="btn-dangnhap" href="/form_dangnhap.html" class="w3-bar-item w3-button">ĐĂNG NHẬP</a>
           <a id="btn-dangxuat" href="/#logout" onclick="logout()" style="display: none;" class="w3-bar-item w3-button">ĐĂNG XUẤT</a>
-          <a id="btn-admin" href="/admin.html" style="display: none;" class="w3-bar-item w3-button">ADMIN</a>
-          <a id="btn-user" href="#user" style="display: none;" class="w3-bar-item w3-button"></a>
+          <a id="btn-admin" href="/admin_users.html" onclick="admin()" style="display: none;" class="w3-bar-item w3-button">ADMIN</a>
+          <a id="btn-user" href="/quanlyHoSoCaNhan.html" style="display: none;" class="w3-bar-item w3-button"></a>
         </div>
       </div>
-      <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i
-        class="fa fa-search"></i></a>
+      <a href="#" class="w3-padding-large w3-hover-red w3-hide-small w3-right">
+        <form action="#" name="formTimKiem" id="formTimKiem">
+          <!--<input type="text" placeholder="Tìm Kiếm.." name="txtTimKiem" id="txtTimKiem">-->
+          <button type="button" name="btnTimKiem" id="btnTimKiem"><i class="fa fa-search"></i></button>
+        </form>
+      </a>
     </div>
   </div>
 
