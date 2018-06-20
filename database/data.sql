@@ -126,7 +126,7 @@ INSERT INTO images(`product_id`,`image_link`) VALUES (5,'https://img.grouponcdn.
 INSERT INTO images(`product_id`,`image_link`) VALUES (6,'https://s.aolcdn.com/hss/storage/midas/2b956a6d6cd04fe19cec5741dbaf84ca/206280856/iPhone8-iPhone8PLUS-PRODUCT-RED_front-back_041018.jpg');
 INSERT INTO images(`product_id`,`image_link`) VALUES (7,'http://www.syncios.com/images/article/transfer-messages-to-oppo-f5-image.jpg');
 INSERT INTO images(`product_id`,`image_link`) VALUES (8,'https://cdn2.gsmarena.com/vv/pics/oppo/oppo-f7-cph1819-1.jpg');
-INSERT INTO images(`product_id`,`image_link`) VALUES (9,'https://propakistani.pk/price/wp-content/uploads/2017/12/OPPO-A83-1-2.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (9,'https://cdn.tgdd.vn/Files/2017/12/26/1053362/anh-minh-hoa_800x450.jpg');
 INSERT INTO images(`product_id`,`image_link`) VALUES (10,'http://harrismastore.co.id/imgs/files/product_image/pic6B605DE31DDBCE82D60C0B687B5BCCC4.jpg');
 INSERT INTO images(`product_id`,`image_link`) VALUES (11,'https://gadgetsdukaan.com/8368-large_default/apple-macbook-pro-core-i7-16gb-256gb-touch-bar-mptu2hna-15-inch-28ghz-radeon-pro-555-with-2gb-of-gddr5.jpg');
 INSERT INTO images(`product_id`,`image_link`) VALUES (12,'http://www.kimhengcenter.com.kh/wp-content/uploads/2015/08/3147.jpg');
@@ -145,6 +145,74 @@ INSERT INTO images(`product_id`,`image_link`) VALUES (24,'http://phukiendexinh.c
 INSERT INTO images(`product_id`,`image_link`) VALUES (25,'https://laptopg7.vn/images/companies/1/Image%20laptop/Acer/Acer%20Aspire%20Switch%2010-01.jpg');
 INSERT INTO images(`product_id`,`image_link`) VALUES (26,'https://laptopg7.vn/images/companies/1/Image%20laptop/Acer/Acer%20Aspire%20Switch%2010-01.jpg');
 INSERT INTO images(`product_id`,`image_link`) VALUES (27,'https://www.jbhifi.com.au/FileLibrary/ProductResources/Images/223284-L-LO.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (28,'https://www.jbhifi.com.au/FileLibrary/ProductResources/Images/223284-L-LO.jpg');
+
+
+INSERT INTO images(`product_id`,`image_link`) VALUES (1,'https://cdn.tgdd.vn/Files/2017/12/26/1053362/oppo-a83_600x542.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (2,'https://phukiengiare.com/images/detailed/30/op-lung-samsung-galaxy-j3-hieu-nillkin-san-1.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (3,'https://cdn.fptshop.com.vn/Uploads/Originals/2016/2/16/635912328431385072_j3-g1.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (4,'https://f5mobile.vn/wp-content/uploads/2015/09/toan-bo-hinh-anh-iphone-6s-va-iphone-6s-plus.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (5,'https://tintuc.shopdunk.com/wp-content/uploads/2017/05/hinh-anh-iphone-8-dang-tin-cay-tu-bao-uy-tin-min.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (6,'http://iworld.com/wp-content/uploads/2017/11/iphone-x-silver-box.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (7,'http://www.syncios.com/images/article/transfer-messages-to-oppo-f5-image.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (8,'https://cdn2.gsmarena.com/vv/pics/oppo/oppo-f7-cph1819-1.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (9,'https://cdn.tgdd.vn/Files/2017/12/26/1053362/anh-minh-hoa_800x450.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (10,'http://techphonevn.com/img/h360/oppo-a83.png');
+INSERT INTO images(`product_id`,`image_link`) VALUES (11,'https://media.wired.com/photos/59e952e4f572231fe56c3937/master/w_582,c_limit/rosegold-macbook-1.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (12,'http://d2pa5gi5n2e1an.cloudfront.net/global/images/product/laptops/Dell_Inspiron_14_3420/Dell_Inspiron_14_3420_L_1.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (13,'http://phatthanhmobile.com/upload/sanpham/thumbs/293-may-tinh-bang-acer-iconia-b1-721-chinh-hang.png');
+INSERT INTO images(`product_id`,`image_link`) VALUES (14,'https://lh6.googleusercontent.com/-CPbS2qejnX8/TQLY6eaeRFI/AAAAAAAAF6g/53JpBfQDm5c/s1600/ipad__full.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (15,'http://i.a4vn.com/2013/5/5/ban-sao-ipad-mini-cua-acer-gia-169-usd-b1fbc3.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (16,'http://i.a4vn.com/2013/9/9/thuc-te-acer-iconia-a3-may-tinh-bang-10-inch-gia-re-4f9f6a.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (17,'http://www.technofileonline.com/images/Acer%20200.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (18,'https://www.didongviet.vn/pub/media/catalog/product//u/n/untitled-2.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (19,'http://laptopno1.com/Upload/Img/Products/Z1-611_gallery_02.png');
+INSERT INTO images(`product_id`,`image_link`) VALUES (20,'https://cdn.nguyenkimmall.com/images/thumbnails/200/150/detailed/150/may-tinh-xach-tay-acer-aspire-e5-771-01.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (21,'https://laptopg7.vn/images/companies/1/Image%20laptop/Acer/Acer%20Aspire%20Switch%2010-01.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (22,'http://ttnn.com.vn/wp-content/uploads/img_5458539bb7955.png');
+INSERT INTO images(`product_id`,`image_link`) VALUES (23,'https://cdn-gd-v1.webbnc.net/useruploads/userfiles//510277/images/3-cach-ket-noi-iphone-voi-tivi-1.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (24,'http://phukiendexinh.com/uploads/images/acer/B1-730/bao-da-Acer-Iconia-One-7-B1-7303.JPG');
+INSERT INTO images(`product_id`,`image_link`) VALUES (25,'https://laptopg7.vn/images/companies/1/Image%20laptop/Acer/Acer%20Aspire%20Switch%2010-01.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (26,'https://laptopg7.vn/images/companies/1/Image%20laptop/Acer/Acer%20Aspire%20Switch%2010-01.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (27,'https://www.jbhifi.com.au/FileLibrary/ProductResources/Images/223284-L-LO.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (28,'https://www.jbhifi.com.au/FileLibrary/ProductResources/Images/223284-L-LO.jpg');
+
+INSERT INTO images(`product_id`,`image_link`) VALUES (1,'https://cdn.tgdd.vn/Files/2017/12/26/1053362/oppo-a83-1_600x613.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (2,'https://www.gizmochina.com/wp-content/uploads/2018/02/Samsung-Galaxy-J3-2018-USA-500x500.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (3,'https://hoanghamobile.com/Uploads/Originals/2017/07/14/201707141137582419_j3-pro2.png;width=720;height=500;watermark=logo;crop=auto;quality=80;format=jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (4,'https://www.slickwraps.com/media/catalog/product/cache/1/image/491x491/9df78eab33525d08d6e5fb8d27136e95/g/l/glitterpink_1_1.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (5,'https://img.grouponcdn.com/deal/2yRZPjQNkyEEbFMN6NdTicmggunP/2y-2048x1229/v1/c700x420.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (6,'https://s.aolcdn.com/hss/storage/midas/2b956a6d6cd04fe19cec5741dbaf84ca/206280856/iPhone8-iPhone8PLUS-PRODUCT-RED_front-back_041018.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (7,'http://www.syncios.com/images/article/transfer-messages-to-oppo-f5-image.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (8,'https://cdn2.gsmarena.com/vv/pics/oppo/oppo-f7-cph1819-1.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (9,'https://cdn.tgdd.vn/Files/2017/12/26/1053362/anh-minh-hoa_800x450.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (10,'http://harrismastore.co.id/imgs/files/product_image/pic6B605DE31DDBCE82D60C0B687B5BCCC4.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (11,'https://gadgetsdukaan.com/8368-large_default/apple-macbook-pro-core-i7-16gb-256gb-touch-bar-mptu2hna-15-inch-28ghz-radeon-pro-555-with-2gb-of-gddr5.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (12,'http://www.kimhengcenter.com.kh/wp-content/uploads/2015/08/3147.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (13,'https://cdn3.tgdd.vn/Products/Images/522/101993/ipad-mini-4-wifi-128gb-321-400x400.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (14,'http://d2pa5gi5n2e1an.cloudfront.net/global/images/product/tablets/ASUS_MeMO_Pad/ASUS_MeMO_Pad_L_1.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (15,'https://www.naijatechguide.com/wp-content/uploads/2017/07/huawei-mediapad-m3-featured.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (16,'https://znews-photo-td.zadn.vn/w660/Uploaded/rik_rdcvcvwt_wc/2017_03_23/ipd1_1.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (17,'http://ttnn.com.vn/wp-content/uploads/img_5458539bb7955.png');
+INSERT INTO images(`product_id`,`image_link`) VALUES (18,'https://cdn-gd-v1.webbnc.net/useruploads/userfiles//510277/images/3-cach-ket-noi-iphone-voi-tivi-1.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (19,'http://phukiendexinh.com/uploads/images/acer/B1-730/bao-da-Acer-Iconia-One-7-B1-7303.JPG');
+INSERT INTO images(`product_id`,`image_link`) VALUES (20,'https://laptopg7.vn/images/companies/1/Image%20laptop/Acer/Acer%20Aspire%20Switch%2010-01.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (21,'https://laptopg7.vn/images/companies/1/Image%20laptop/Acer/Acer%20Aspire%20Switch%2010-01.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (22,'http://ttnn.com.vn/wp-content/uploads/img_5458539bb7955.png');
+INSERT INTO images(`product_id`,`image_link`) VALUES (23,'https://cdn-gd-v1.webbnc.net/useruploads/userfiles//510277/images/3-cach-ket-noi-iphone-voi-tivi-1.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (24,'http://phukiendexinh.com/uploads/images/acer/B1-730/bao-da-Acer-Iconia-One-7-B1-7303.JPG');
+INSERT INTO images(`product_id`,`image_link`) VALUES (25,'https://laptopg7.vn/images/companies/1/Image%20laptop/Acer/Acer%20Aspire%20Switch%2010-01.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (26,'https://laptopg7.vn/images/companies/1/Image%20laptop/Acer/Acer%20Aspire%20Switch%2010-01.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (27,'https://www.jbhifi.com.au/FileLibrary/ProductResources/Images/223284-L-LO.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (28,'https://www.jbhifi.com.au/FileLibrary/ProductResources/Images/223284-L-LO.jpg');
+
+
+
+
+
+
+
+
 
 
 
