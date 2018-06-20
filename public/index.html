@@ -155,7 +155,7 @@
     $(function(){
         $('#btnTimKiem').on('click', function(){
             $.ajax({
-                url: '/product/search',
+                url: '/api/product/search',
                 data:{
                     productName:$('#txtTimKiem').val(),
                 }
