@@ -16,6 +16,10 @@
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -123,16 +127,16 @@ a[data-toggle="collapse"] {
             <ul class="list-unstyled components">
                
                 <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" >Quản lí danh mục (product)</a>
+                    <a href="/admin_products.html"  >Quản lí danh mục (product)</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                        
                     </ul>
                 </li>
                 <li>
-                    <a href="#">Phê duyệt tài khoản người bán</a>
+                    <a href="/admin_pheduyet.html">Phê duyệt tài khoản người bán</a>
                 </li>
                 <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false ">Quản lí danh sách người dung(users)</a>
+                    <a href="/admin_users.html" >Quản lí danh sách người dung(users)</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
                        
                     </ul>
@@ -142,7 +146,7 @@ a[data-toggle="collapse"] {
         </nav>
         <div>
                 <button type="button" class="btn btn-danger">ADD PRODUCTS</button>
-                <table class="table">
+                <table class="table" id="myTable">
 
                 <thead>
                     <tr>
@@ -186,6 +190,36 @@ a[data-toggle="collapse"] {
     
         </div>
     </div>
+    <script>
+        $.ajax({
+            url: '/api/product',
+           
+        }).done(function (res) {
+            console.log(res)
+            var btn = document.createElement("BUTTON");
+            var deleteUser = document.createTextNode("Delete");
+            var reset = document.createTextNode("ResetPass");
+            var tr
+            for (var i = 0; i < res.data.length; i++) {
+            tr = $('<tr>');
+            tr.append("<td>" + res.data[i].id + "</td>");
+            tr.append("<td>" + res.data[i].name + "</td>");
+            tr.append("<td>" + res.data[i].catelog_id + "</td>");
+            tr.append("<td>" + res.data[i].price + "</td>");
+            tr.append("<td>" + res.data[i].starting_price + "</td>");
+            tr.append("<td>" + res.data[i].step_code  + "</td>");
+            tr.append("<td>" + res.data[i].id_auto_renew  + "</td>");
+            tr.append("<td>" + res.data[i].content + "</td>");
+            tr.append("<td>" + res.data[i].discount + "</td>");
+            tr.append("<td>" + res.data[i].views + "</td>");
+            tr.append("<td>" + res.data[i].producer + "</td>");
+            tr.append("<td>" + res.data[i].seller_id + "</td>");
+            tr.append("<td>" +  btn + "</td>");
+            $('#myTable').append(tr);
+        }
+        })
+    </script>
+
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!-- Popper.JS -->

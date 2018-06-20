@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
 
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
@@ -123,23 +127,23 @@ a[data-toggle="collapse"] {
             <ul class="list-unstyled components">
                
                 <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" >Quản lí danh mục (product)</a>
+                    <a href="/admin_products.html"  >Quản lí danh mục (product)</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                        
                     </ul>
                 </li>
                 <li>
-                    <a href="#">Phê duyệt tài khoản người bán</a>
+                    <a href="/admin_pheduyet.html">Phê duyệt tài khoản người bán</a>
                 </li>
                 <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false ">Quản lí danh sách người dung(users)</a>
+                    <a href="/admin_users.html" >Quản lí danh sách người dung(users)</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
                        
                     </ul>
                 </li>
             </ul>
         </nav>
-        <table class="table">
+        <table class="table" id="myTable">
                 <thead>
                   <tr>
                     <th>id</th>
@@ -173,6 +177,34 @@ a[data-toggle="collapse"] {
               </table>
     
     </div>
+    <script>
+            // var table = document.getElementById("myTable");
+            $.ajax({
+                url: '/api/user',
+               
+            }).done(function (res) {
+                console.log(res)
+                var btn = document.createElement("BUTTON");
+                var deleteUser = document.createTextNode("Delete");
+                var reset = document.createTextNode("ResetPass");
+                var tr
+                for (var i = 0; i < res.data.length; i++) {
+                tr = $('<tr>');
+                tr.append("<td>" + res.data[i].id + "</td>");
+                tr.append("<td>" + res.data[i].name + "</td>");
+                tr.append("<td>" + res.data[i].email + "</td>");
+                tr.append("<td>" + res.data[i].password + "</td>");
+                tr.append("<td>" + res.data[i].address + "</td>");
+                tr.append("<td>" + res.data[i].phone_number  + "</td>");
+                tr.append("<td>" + res.data[i].role  + "</td>");
+                tr.append("<td>" + res.data[i].created_at + "</td>");
+                tr.append("<td>" + res.data[i].updated_at + "</td>");
+                tr.append("<td>" +  btn + "</td>");
+                $('#myTable').append(tr);
+            }
+            })
+            
+        </script>
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!-- Popper.JS -->
