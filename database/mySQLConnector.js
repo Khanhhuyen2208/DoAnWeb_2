@@ -4,7 +4,7 @@ const config = require('../config/database.json')[process.env.NODE_ENV]
 
 // Initialize pool
 const pool = mysql.createPool({
-  connectionLimit: 10000,
+  connectionLimit: 1000000,
   host: config.host,
   user: config.user,
   port: config.port,

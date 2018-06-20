@@ -55,9 +55,16 @@ async function ProductList (products) {
   console.log(products)
   for (let i in products) {
     let obj = products[i]
-    let image = await axios.get('/api/image?product_id=' + obj.id)
-    let imageLink = image.data.data[0]
-    if (!imageLink) {
+    let image
+    let imageLink
+    try {
+      image = await axios.get('/api/image?product_id=' + obj.id)
+      imageLink = image.data.data[0]
+      if (!imageLink) {
+        continue
+      }
+    } catch (e) {
+      console.log(e)
       continue
     }
     imageLink = imageLink.image_link
@@ -104,7 +111,7 @@ function renderProduct (product) {
     }</b></p>\n` +
     `           <button id="product_${
       product.id
-    }" class="w3-button w3-black w3-margin-bottom" onclick="redirect(this)">ĐẤU GIÁ</button>\n` +
+    }" class="w3-button w3-black w3-margin-bottom" onclick="redirect(this)">ĐẤU GIÁ</button><button style="color:#F00;font-size:34px"><i class="fa fa-thumbs-up"></i></button>\n` +
     '      </div>'
   )
 }

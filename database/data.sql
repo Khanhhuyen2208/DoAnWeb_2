@@ -126,7 +126,7 @@ INSERT INTO images(`product_id`,`image_link`) VALUES (5,'https://img.grouponcdn.
 INSERT INTO images(`product_id`,`image_link`) VALUES (6,'https://s.aolcdn.com/hss/storage/midas/2b956a6d6cd04fe19cec5741dbaf84ca/206280856/iPhone8-iPhone8PLUS-PRODUCT-RED_front-back_041018.jpg');
 INSERT INTO images(`product_id`,`image_link`) VALUES (7,'http://www.syncios.com/images/article/transfer-messages-to-oppo-f5-image.jpg');
 INSERT INTO images(`product_id`,`image_link`) VALUES (8,'https://cdn2.gsmarena.com/vv/pics/oppo/oppo-f7-cph1819-1.jpg');
-INSERT INTO images(`product_id`,`image_link`) VALUES (9,'https://cdn.tgdd.vn/Files/2017/12/26/1053362/anh-minh-hoa_800x450.jpg');
+INSERT INTO images(`product_id`,`image_link`) VALUES (9,'http://stcv4.hnammobile.com//downloads/c/5.jpg');
 INSERT INTO images(`product_id`,`image_link`) VALUES (10,'http://harrismastore.co.id/imgs/files/product_image/pic6B605DE31DDBCE82D60C0B687B5BCCC4.jpg');
 INSERT INTO images(`product_id`,`image_link`) VALUES (11,'https://gadgetsdukaan.com/8368-large_default/apple-macbook-pro-core-i7-16gb-256gb-touch-bar-mptu2hna-15-inch-28ghz-radeon-pro-555-with-2gb-of-gddr5.jpg');
 INSERT INTO images(`product_id`,`image_link`) VALUES (12,'http://www.kimhengcenter.com.kh/wp-content/uploads/2015/08/3147.jpg');
@@ -175,7 +175,6 @@ INSERT INTO images(`product_id`,`image_link`) VALUES (24,'http://phukiendexinh.c
 INSERT INTO images(`product_id`,`image_link`) VALUES (25,'https://laptopg7.vn/images/companies/1/Image%20laptop/Acer/Acer%20Aspire%20Switch%2010-01.jpg');
 INSERT INTO images(`product_id`,`image_link`) VALUES (26,'https://laptopg7.vn/images/companies/1/Image%20laptop/Acer/Acer%20Aspire%20Switch%2010-01.jpg');
 INSERT INTO images(`product_id`,`image_link`) VALUES (27,'https://www.jbhifi.com.au/FileLibrary/ProductResources/Images/223284-L-LO.jpg');
-INSERT INTO images(`product_id`,`image_link`) VALUES (28,'https://www.jbhifi.com.au/FileLibrary/ProductResources/Images/223284-L-LO.jpg');
 
 INSERT INTO images(`product_id`,`image_link`) VALUES (1,'https://cdn.tgdd.vn/Files/2017/12/26/1053362/oppo-a83-1_600x613.jpg');
 INSERT INTO images(`product_id`,`image_link`) VALUES (2,'https://www.gizmochina.com/wp-content/uploads/2018/02/Samsung-Galaxy-J3-2018-USA-500x500.jpg');
