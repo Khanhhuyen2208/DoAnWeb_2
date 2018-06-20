@@ -132,19 +132,19 @@
             <!-- Full-width images with number and caption text -->
             <div class="mySlides fade">
       
-              <img src="https://cdn.tgdd.vn/Products/Images/42/73908/samsung-galaxy-j3-2-400x460.png" style="width:100%">
+              <img id="slider-img-1" src="https://cdn.tgdd.vn/Products/Images/42/73908/samsung-galaxy-j3-2-400x460.png" style="width:100%">
               
             </div>
           
             <div class="mySlides fade">
               
-              <img src="https://cdn2.gsmarena.com/vv/pics/oppo/oppo-f7-cph1819-1.jpg"  style="width:100%">
+              <img id="slider-img-2" src="https://cdn2.gsmarena.com/vv/pics/oppo/oppo-f7-cph1819-1.jpg"  style="width:100%">
             
             </div>
           
             <div class="mySlides fade">
              
-              <img src="https://www.proandroid.com/wp-content/uploads/2018/02/Galaxy-j3-dorado.jpg"  style="width:100%">
+              <img id="slider-img-3" src="https://www.proandroid.com/wp-content/uploads/2018/02/Galaxy-j3-dorado.jpg"  style="width:100%">
               
             </div>
           
@@ -255,8 +255,11 @@
           url: "/api/image?product_id=" + id
         })
           .done(function (data) {
-            let image = data.data[0]
-            $('#image').attr('src', image.image_link);
+            let images = data.data
+
+            images.forEach((image, index) => {
+              $(`#slider-img-${index + 1}`).attr('src', image.image_link);
+            })
           })
 
         // Get seller
