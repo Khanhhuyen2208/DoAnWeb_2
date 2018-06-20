@@ -1,12 +1,50 @@
-<!DOCTYPE html>
-<html>
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>DO AN WEB</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="/JS/main.js"></script>
+</head>
+<style>
+  body {font-family: "Lato", sans-serif}
+  .mySlides {display: none}
+</style>
+<body onload="loadProductsPage()">
+<div id="app">
 
-    <title>danh muc admin</title>
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)"
+         onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="/" class="w3-bar-item w3-button w3-padding-large">TRANG CHỦ</a>
+      <a href="/SanPham.html" class="w3-bar-item w3-button w3-padding-large">TẤT CẢ SẢN PHẨM</a>
+      <a href="/SanPham.html?catalog=1" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ĐIỆN THOẠI</a>
+      <a href="/SanPham.html?catalog=2" class="w3-bar-item w3-button w3-padding-large w3-hide-small">LAPTOP</a>
+      <a href="/SanPham.html?catalog=3" class="w3-bar-item w3-button w3-padding-large w3-hide-small">MÁY TÍNH BẢNG</a>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <button class="w3-padding-large w3-button" title="More">HỒ SƠ CỦA TÔI <i class="fa fa-caret-down"></i></button>
+        <div id="profile" class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a id="btn-dangki" href="/form_dangki.html" class="w3-bar-item w3-button">ĐĂNG KÍ</a>
+          <a id="btn-dangnhap" href="/form_dangnhap.html" class="w3-bar-item w3-button">ĐĂNG NHẬP</a>
+          <a id="btn-dangxuat" href="/#logout" onclick="logout()" style="display: none;" class="w3-bar-item w3-button">ĐĂNG XUẤT</a>
+          <a id="btn-admin" href="/admin.html" style="display: none;" class="w3-bar-item w3-button">ADMIN</a>
+          <a id="btn-user" href="#user" style="display: none;" class="w3-bar-item w3-button"></a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -117,7 +155,7 @@ a[data-toggle="collapse"] {
         <!-- Sidebar -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h1 style="text-align: center"> PHÂN HỆ NGƯỜI DÙNG_ NGƯỜI BÁN </h1>
+                <h1 style="text-align: center ;max-width:2000px;margin-top:46px;"> PHÂN HỆ NGƯỜI DÙNG_ NGƯỜI BÁN </h1>
             </div>
     
             <ul class="list-unstyled components">
@@ -158,7 +196,7 @@ a[data-toggle="collapse"] {
        
  <div>      
 
-<input type="file" id="myFile">
+<input style="padding-top: 100px" type="file" id="myFile">
 
 
 
@@ -171,14 +209,15 @@ function myFunction() {
 </script>
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  </div>
+    <script   src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!-- Popper.JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     
     <div >
-            <textarea style="width: 500px;text-align: center;height: 90px; padding: 25px" id="froala-editor"></textarea>
+            <textarea style="width: 500px;text-align: center;height: 90px; padding: 25px ;max-width:2000px;margin-top:46px; padding-top: 100px;margin-top: 81px;" id="froala-editor"></textarea>
             <script>
                     $(function() {
                       $('textarea#froala-editor').froalaEditor()
