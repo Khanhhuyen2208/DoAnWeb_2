@@ -51,7 +51,7 @@ async function login (req, res) {
           id: user.id,
           name: user.name,
           email: user.email,
-          isAdmin: user.is_admin
+          isAdmin: user.role === 0
         }
 
         return res.json(payload)

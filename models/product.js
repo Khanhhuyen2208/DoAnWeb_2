@@ -9,10 +9,12 @@ const tableName = 'products'
  */
 function index (limit = {}, input = {}) {
   return new Promise(function (resovle, reject) {
+    let sortStatement = queryUtils.createOrderByStatement(input)
     let whereStatement = queryUtils.createWhereStatement(input)
     let limitStatement = queryUtils.createLimitStatement(limit)
     let sql = `Select * From ${tableName} 
       ${whereStatement} 
+      ${sortStatement} 
       ${limitStatement}`
 
     DBManage.executeQuery(sql, function (err, data) {

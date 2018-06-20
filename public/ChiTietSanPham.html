@@ -1,224 +1,286 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="css/style_1.css"/>
-<title>DO AN WEB 2</title>
-<script
-  src="https://code.jquery.com/jquery-2.2.4.min.js"
-  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-  crossorigin="anonymous"></script>
-
-</head>
-<style>
-	.khung
-	{
-		width:450px;
-		background-color:#f2f2f2f2;
-		height:60px;
-		float:left;
-	}
-	.khung input[type=text]
-	{
-		width:80%;
-		height:35px;
-		margin:5px 2%;
-		float:left;
-	}
-	.khung input[type=button]
-	{
-		width:15%;
-		height:35px;
-		color:#fff;
-		background-color:#06C;
-		margin-top:5px;
-		float:left;
-	}
-</style>
-
-<body>
-	<div class="container">
-    	<div class="logo">
-        	
+<body onload="onLoad()">
+<div>
+  <div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)"
+         onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="/" class="w3-bar-item w3-button w3-padding-large">TRANG CHỦ</a>
+      <a href="/SanPham.html" class="w3-bar-item w3-button w3-padding-large">TẤT CẢ SẢN PHẨM</a>
+      <a href="/SanPham.html?catalog=1" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ĐIỆN THOẠI</a>
+      <a href="/SanPham.html?catalog=2" class="w3-bar-item w3-button w3-padding-large w3-hide-small">LAPTOP</a>
+      <a href="/SanPham.html?catalog=3" class="w3-bar-item w3-button w3-padding-large w3-hide-small">MÁY TÍNH BẢNG</a>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <button class="w3-padding-large w3-button" title="More">HỒ SƠ CỦA TÔI <i class="fa fa-caret-down"></i></button>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a href="http://localhost:3001/form_dangki.html" class="w3-bar-item w3-button">ĐĂNG KÍ</a>
+          <a href="http://localhost:3001/form_dangnhap.html" class="w3-bar-item w3-button">ĐĂNG NHẬP</a>
+          <a href="#lienhe" class="w3-bar-item w3-button">LIÊN HỆ</a>
         </div>
-  		<div class="khung">
-        <form>
-        	<input type="text" id="productVal"  placeholder="Tìm Kiếm" />
-            <input type="button" id="search" value="Tìm Kiếm"  />
-        </form>
-        
+      </div>
+      <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i
+        class="fa fa-search"></i></a>
     </div>
-    <div style="clear:both">
+  </div>
+
+  <div class="container">
+    <!-- Navbar -->
+    <div class="logo">
     </div>
-    <div class="container">
-    	<div class="nav">
-    		<ul>
-                <li><a href="#">Trang Chủ</a></li>
-                 <li><a href="#">Sản Phẩm</a></li>
-                <li><a href="#">Điện Thoại</a></li>
-                <li><a href="#">LapTop</a></li>
-                <li><a href="#">Máy Tính Bảng</a></li>
-        	</ul>
-        </div>
-    </div>
-    <div style="clear:both">
-    </div>
-    <div class="container">
-    	
-    </div>
-    <div style="clear:both">
+    <div class="khung">
+      <form>
+        <input type="text" id="productVal" placeholder="Tìm Kiếm"/>
+        <input type="button" id="search" value="Tìm Kiếm"/>
+      </form>
     </div>
     <section class="container section_1">
-    
-        <div class="content">
-        	<Center><h1>Chi Tiết Sản Phẩm</h1></Center>
-            <div class="item"  style="width:460px; height:560px">
-                <img scr="https://cdn.tgdd.vn/Products/Images/42/73908/samsung-galaxy-j3-2-400x460.png" alt="gd" id="image"/>
+      <div class="w3-row">
+        <Center><h1>Chi Tiết Sản Phẩm</h1></Center>
+        <div class="w3-col s6 content">
+          <h1>Tên Sản Phẩm</h1>
+          <hr class="soft"/>
+
+          <form class="form-horizontal qtyFrm">
+            <div class="control-group">
+              <label class="control-label"><span><h3>Giá khởi điểm: </h3></span></label>
+              <div class="col-3">
+                <input type="text" value="" id="giaKhoiDiem" placeholder="Giá khởi điểm..." style="width:350px; height:30px" disabled/>
+              </div>
             </div>
-        
-				<h1>Tên Sản Phẩm</h1>
-				<hr class="soft"/>
-				
-				<form class="form-horizontal qtyFrm">
-				  <div class="control-group">
-					<label class="control-label"><span><h3>Giá gốc của sản phẩm: </h3></span></label>
-					<div class="col-3">
-					<input type="text" value="" id="giaGoc" placeholder="Gia Goc" style="width:350px; height:30px"/>
-					</div>
-				  </div>
-				
-                <div class="control-group">
-					<label class="control-label"><span><h3>Giá hiện tại của sản phẩm: </h3></span></label>
-					<div class="col-3">
-					<input type="text" value="" id="giaHienTai" placeholder="Gia Hien Tai" style="width:350px; height:30px"/>
-					</div>
-                    
-                    <div class="control-group">
-					<label class="control-label"><span><h3>Người Bán: </h3></span></label>
-					<div class="col-3">
-					<input type="text" value="" id="nguoiBan" style="width:350px; height:30px"/>
-					</div>
-                    
-                    <div class="control-group">
-                        <label class="control-label"><span><h3>Đánh Giá Sản Phẩm: </h3></span></label>
-                        <div class="col-3">
-                        <input type="number" value="" id="danhGia" max="5" min="1" style="width:350px; height:30px"/>
-                        </div>
 
-                    <div class="control-group">
-					<label class="control-label"><span><h3>Người Giữ Giá Cao Nhất: </h3></span></label>
-					<div class="col-3">
-					<input type="text" value="" id="nguoiGiaCaoNhat" style="width:350px; height:30px"/>
-					</div>
-                
-				  <div class="control-group">
-					<label class="control-label"><span><h3>Số Lượt Xem: </h3></span></label>
-					<div class="col-3">
-					<input type="text"value="" id="soLuotXem" placeholder="So Luot Xem San Pham" style="width:350px; height:30px"/>
-					</div>
-				  </div>
-                  
-                  <div class="control-group">
-					<label class="control-label"><span><h3>Thời Gian Đăng: </h3></span></label>
-					<div class="col-3">
-					<input type="datetime" value="" id="thoiGianDang" style="width:350px; height:30px"/>
-					</div>
-                    
-                    <div class="control-group">
-					<label class="control-label"><span><h3>Thời Gian Hết Hạn: </h3></span></label>
-					<div class="col-3">
-					<input type="datetime" value="" id="thoiGianHetHan" style="width:350px; height:30px"/>
-                    </div>
-                    
-                    <div class="control-group">
-                        <label class="control-label"><span><h3>Giá Đấu: </h3></span></label>
-                        <div class="col-3">
-                        <input type="datetime" value="" id="giaDau" style="width:350px; height:30px"/>
-                        </div>
-				  </div>
-					<br />
-                  <center><button 
-                    
-                    id="addCart" style="width:250px; height:30px">
-                    <a style="text-decoration: none;" href="http://localhost:3001/giohang.html">
-                        Thêm Vào Giỏ Hàng
-                    
-                    </a>
-                    </button></center>
-                  <br />
-				</form>
-			</div>
-			</div>
-	
-                  <div class="container-fluid text-center">    
-                <table class="table" style="width:100%;">
-                    <center><h2>Thông Tin Sản Phẩm: </h2></center>
-                   <thead>
-                	
-                      <tr>
-                        <td>Màn hình: </td>
-                        <td>Maria Anders</td>
-                      </tr>
-                      <tr>
-                        <td>Camera trước: </td>
-                        <td>Maria Anders</td>
-                      </tr>
-                      <tr>
-                        <td>Camera sau: </td>
-                        <td>Maria Anders</td>
-                      </tr>
-                      <tr>
-                        <td>RAM: </td>
-                        <td>Maria Anders</td>
-                      </tr>
-                      <tr>
-                        <td>Bộ Nhớ Trong: </td>
-                        <td>Maria Anders</td>
-                      </tr>
-                      </thead>
-                  </table>
-				  </div>
-			
-           
-    	</div>
+            <div class="control-group">
+              <label class="control-label"><span><h3>Giá hiện tại: </h3></span></label>
+              <div class="col-3">
+                <input type="text" value="" id="giaHienTai" placeholder="Giá hiện tại" style="width:350px; height:30px" disabled/>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label"><span><h3>Giá mua ngay: </h3></span></label>
+              <div class="col-3">
+                <input type="text" value="" id="giaMuaNgay" placeholder="Giá mua ngay" style="width:350px; height:30px" disabled/>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label"><span><h3>Bước nhảy: </h3></span></label>
+              <div class="col-3">
+                <input type="text" value="" id="buocNhay" placeholder="Bước nhảy" style="width:350px; height:30px" disabled/>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label"><span><h3>Người Bán: </h3></span></label>
+              <div class="col-3">
+                <input type="text" value="" id="nguoiBan" style="width:350px; height:30px" disabled/>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label"><span><h3>Đánh Giá Sản Phẩm: </h3></span></label>
+              <div class="col-3">
+                <input type="number" id="danhGia" max="5" min="1" style="width:350px; height:30px" disabled/>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label"><span><h3>Giá Cao Nhất: </h3></span></label>
+              <div class="col-3">
+                <input type="text" value="" id="giaCaoNhat" style="width:350px; height:30px" disabled/>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label"><span><h3>Số Lượt Xem: </h3></span></label>
+              <div class="col-3">
+                <input type="text" value="" id="soLuotXem" placeholder="So Luot Xem San Pham"
+                       style="width:350px; height:30px" disabled/>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label"><span><h3>Thời Gian Đăng: </h3></span></label>
+              <div class="col-3">
+                <input type="datetime" value="" id="thoiGianDang" style="width:350px; height:30px" disabled/>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label"><span><h3>Thời Gian Hết Hạn: </h3></span></label>
+              <div class="col-3">
+                <input type="datetime" value="" id="thoiGianHetHan" style="width:350px; height:30px" disabled/>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label"><span><h3>Giá Đấu: </h3></span></label>
+              <div class="col-3">
+                <input type="datetime" value="" id="giaDau" style="width:350px; height:30px"/>
+              </div>
+            </div>
+            <br/>
+            <center>
+              <button
+
+                id="addCart" style="width:250px; height:30px">
+                <a style="text-decoration: none;" href="http://localhost:3001/giohang.html">
+                  Thêm Vào Giỏ Hàng
+
+                </a>
+              </button>
+            </center>
+            <br/>
+          </form>
+        </div>
+        <div class="w3-col s6">
+          <div class="item" style="width:460px; height:560px">
+            <img id="image" alt="gd" id="image"/>
+          </div>
+
+        </div>
+        <div class="w3-col s12 text-center">
+          <table class="table" style="width:100%;">
+            <center><h2>Thông Tin Sản Phẩm: </h2></center>
+            <thead>
+              <tr>
+                <td>Tên:</td>
+                <td id="detail_name"></td>
+              </tr>
+              <tr>
+                <td>Overview:</td>
+                <td id="detail_content"></td>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
     </section>
-    <div style="clear:both">
+  </div>
+</div>
+
+<!-- lien he -->
+<div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="lienhe">
+  <h2 class="w3-wide w3-center">LIÊN HỆ</h2>
+  <p class="w3-opacity w3-center">HÃY LIÊN HỆ VỚI CHÚNG TÔI</p>
+  <div class="w3-row w3-padding-32">
+    <div class="w3-col m6 w3-large w3-margin-bottom">
+      <i class="fa fa-map-marker" style="width:30px"></i> ĐẤU GIÁ NHANH , VIỆT NAM<br>
+      <i class="fa fa-phone" style="width:30px"></i> Phone: +00560197<br>
+      <i class="fa fa-envelope" style="width:30px"> </i> Email: daugianhanh.com<br>
     </div>
-    
-    <footer class="container">
-    </footer>
-    <script>
+    <div class="w3-col m6">
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+        <button class="w3-button w3-black w3-section w3-right" type="submit">GỬI</button>
+      </form>
+    </div>
+  </div>
+</div>
 
-        $("#search").click(function(){
-            $.ajax({
-                type:"get",
-                url:"/api/product/"+$("#productVal").val()
-            })
-            .done(function(data) {
-                var currentProDuct=$("#productVal").val()-1
-                
-                $('#giaGoc').val(data[currentProDuct].starting_price);
-                $('#giaHienTai').val(data[currentProDuct].price);
-                $('#nguoiBan').val(data[currentProDuct].seller_id);
-                $('#danhGia').val(data[currentProDuct].starting_price);
-                $('#nguoiGiaCaoNhat').val(data[currentProDuct].starting_price);
-                $('#soLuotXem').val(data[currentProDuct].views);
-                $('#thoiGianDang').val(data[currentProDuct].start_at);
-                $('#thoiGianHetHan').val(data[currentProDuct].expire_at);
-                $('#giaDau').val(data[currentProDuct].is_auto_renew);
+<script>
+  function onLoad() {
+    let search = window.location.search,
+      id = 0
+    if (search) {
+      id = search.split('=').pop()
+    }
 
-            $.ajax({
-                type:"get",
-                url:"/api/image/"+$("#productVal").val()
-            
-            }).done(function(data){
-                var currentProDuctImg=$("#productVal").val()-1
-                $("#image").attr('scr',data[currentProDuctImg].image_link)
-            })
-});
-    });
+    $.ajax({
+      type: "get",
+      url: "/api/product/" + id
+    })
+      .done(function (data) {
+        var currentProDuct = 0
+        $('#detail_name').text(data[currentProDuct].name)
+        $('#detail_content').text(data[currentProDuct].content)
+        $('#giaKhoiDiem').val(data[currentProDuct].starting_price);
+        $('#giaHienTai').val(data[currentProDuct].price);
+        $('#buocNhay').val(data[currentProDuct].step_cost);
+        $('#giaMuaNgay').val(data[currentProDuct].price);
+        $('#nguoiBan').val(data[currentProDuct].seller_id);
+        $('#danhGia').val(data[currentProDuct].starting_price);
+        $('#nguoiGiaCaoNhat').val(data[currentProDuct].starting_price);
+        $('#soLuotXem').val(data[currentProDuct].views);
+        $('#thoiGianDang').val(data[currentProDuct].start_at);
+        $('#thoiGianHetHan').val(data[currentProDuct].expire_at);
+        $('#giaDau').val(data[currentProDuct].is_auto_renew);
 
-            
-    </script>
+        // Get product image
+        $.ajax({
+          type: "get",
+          url: "/api/image?product_id=" + id
+        })
+          .done(function (data) {
+            let image = data.data[0]
+            $('#image').attr('src', image.image_link);
+          })
+
+        // Get seller
+        $.ajax({
+          type: "get",
+          url: "/api/user/" + data[currentProDuct].seller_id
+        })
+          .done(function (data) {
+            let user = data[0]
+            $('#nguoiBan').val(user.name);
+          })
+
+        // Get current price
+        $.ajax({
+          type: "get",
+          url: "/api/bidlog?sort=-price&limit=1&product_id=" + data[currentProDuct].id
+        })
+          .done(function (data) {
+            let maxPrice = data.data[0].price
+            $('#giaCaoNhat').val(maxPrice);
+          })
+      });
+  }
+</script>
 </body>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link rel="stylesheet" type="text/css" href="css/style_1.css"/>
+  <title>DO AN WEB 2</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+</head>
+
+<style>
+  .khung {
+    width: 450px;
+    background-color: #f2f2f2f2;
+    height: 60px;
+    float: left;
+  }
+
+  .khung input[type=text] {
+    width: 80%;
+    height: 35px;
+    margin: 5px 2%;
+    float: left;
+  }
+
+  .khung input[type=button] {
+    width: 15%;
+    height: 35px;
+    color: #fff;
+    background-color: #06C;
+    margin-top: 5px;
+    float: left;
+  }
+</style>
 </html>

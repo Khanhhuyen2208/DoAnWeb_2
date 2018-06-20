@@ -10,10 +10,12 @@ const tableName = 'images'
 function index (limit = {}, input = {}) {
   // Create query string
   return new Promise(function (resolve, reject) {
+    let sortStatement = queryUtils.createOrderByStatement(input)
     let whereStatement = queryUtils.createWhereStatement(input)
     let limitStatement = queryUtils.createLimitStatement(limit)
     let sql = `Select * From ${tableName} 
       ${whereStatement} 
+      ${sortStatement} 
       ${limitStatement}`
 
     DBManage.executeQuery(sql, function (err, data) {
