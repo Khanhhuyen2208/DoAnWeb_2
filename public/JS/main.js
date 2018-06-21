@@ -217,7 +217,8 @@ function getSearchProducts () {
     let query = window.location.search
     let searchQuery = query.split('?').pop()
     let likekey = searchQuery.split('=').pop()
-
+    let title = document.getElementById('title')
+    title.innerHTML = title.innerHTML + likekey
     axios
       .get(`/api/product?likekey=${likekey}&searchfield=name`)
       .then(res => {
