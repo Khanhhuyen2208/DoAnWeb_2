@@ -1,3 +1,12 @@
+function search (el) {
+  let searchkey = document.getElementById('search-input').value
+  if (!searchkey) {
+    return
+  }
+
+  window.location.href = '/search.html?tags=' + searchkey
+}
+
 function timeConverter (UNIX_timestamp) {
   var delta = Math.abs(UNIX_timestamp) / 1000
 
@@ -14,6 +23,12 @@ function timeConverter (UNIX_timestamp) {
   delta -= minutes * 60
 
   return `${days} days ${hours} hours ${minutes} minutes`
+}
+
+async function loadSearchPage () {
+  let products = await getSearchProducts()
+  ProductSearchList(products)
+  getUserInfo()
 }
 
 async function loadIndexPage () {
@@ -120,6 +135,40 @@ async function ProductList (products) {
   }
 }
 
+async function ProductSearchList (products) {
+  for (let i in products) {
+    let obj = products[i]
+    let image
+    let imageLink
+    let bidlogs
+    try {
+      image = await axios.get('/api/image?product_id=' + obj.id)
+      imageLink = image.data.data[0]
+      bidlogs = await axios.get('/api/bidlog?product_id=' + obj.id)
+      bidlogs = bidlogs.data.total
+      if (!imageLink) {
+        continue
+      }
+    } catch (e) {
+      console.log(e)
+      continue
+    }
+    imageLink = imageLink.image_link
+    let product = new Product(
+      obj.id,
+      obj.catalog_id,
+      obj.name,
+      `${obj.starting_price} đ`,
+      `${obj.price} đ`,
+      imageLink,
+      obj.expire_at,
+      bidlogs
+    )
+    let el = renderProduct(product)
+    $(`#catalog_1`).append(el)
+  }
+}
+
 async function getTableProducts (products) {
   for (let i in products) {
     let obj = products[i]
@@ -154,6 +203,23 @@ function getProducts () {
   return new Promise(function (resolve, reject) {
     axios
       .get('/api/product?limit=0')
+      .then(res => {
+        resolve(res.data.data || [])
+      })
+      .catch(e => {
+        resolve([])
+      })
+  })
+}
+
+function getSearchProducts () {
+  return new Promise(function (resolve, reject) {
+    let query = window.location.search
+    let searchQuery = query.split('?').pop()
+    let likekey = searchQuery.split('=').pop()
+
+    axios
+      .get(`/api/product?likekey=${likekey}&searchfield=name`)
       .then(res => {
         resolve(res.data.data || [])
       })

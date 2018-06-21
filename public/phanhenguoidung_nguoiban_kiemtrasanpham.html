@@ -27,24 +27,34 @@
     <div class="w3-bar w3-black w3-card">
       <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)"
          onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <marquee style="color:#FF0;font-family:Verdana, Geneva, sans-serif;font-size:18px;font-weight:bold">ĐẤUGIÁNHANH.COM</marquee>
       <a href="/" class="w3-bar-item w3-button w3-padding-large">TRANG CHỦ</a>
-      <a href="/SanPham.html" class="w3-bar-item w3-button w3-padding-large">TẤT CẢ SẢN PHẨM</a>
+      <a href="/SanPham.html" class="w3-bar-item w3-button w3-padding-large">TẤT CẢ</a>
       <a href="/SanPham.html?catalog=1" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ĐIỆN THOẠI</a>
       <a href="/SanPham.html?catalog=2" class="w3-bar-item w3-button w3-padding-large w3-hide-small">LAPTOP</a>
-      <a href="/SanPham.html?catalog=3" class="w3-bar-item w3-button w3-padding-large w3-hide-small">MÁY TÍNH BẢNG</a>
+      <a href="/SanPham.html?catalog=3" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TABLET</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Yêu Thích</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Đang Đấu Giá</a>
+      <a href="/giohang.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Đã Thắng</a>
       <div class="w3-dropdown-hover w3-hide-small">
-        <button class="w3-padding-large w3-button" title="More">HỒ SƠ CỦA TÔI <i class="fa fa-caret-down"></i></button>
+        <button class="w3-padding-large w3-button" title="More">HỒ SƠ<i class="fa fa-caret-down"></i></button>
         <div id="profile" class="w3-dropdown-content w3-bar-block w3-card-4">
           <a id="btn-dangki" href="/form_dangki.html" class="w3-bar-item w3-button">ĐĂNG KÍ</a>
           <a id="btn-dangnhap" href="/form_dangnhap.html" class="w3-bar-item w3-button">ĐĂNG NHẬP</a>
           <a id="btn-dangxuat" href="/#logout" onclick="logout()" style="display: none;" class="w3-bar-item w3-button">ĐĂNG XUẤT</a>
-          <a id="btn-admin" href="/admin.html" style="display: none;" class="w3-bar-item w3-button">ADMIN</a>
-          <a id="btn-user" href="#user" style="display: none;" class="w3-bar-item w3-button"></a>
+          <a id="btn-admin" href="/admin_users.html" onclick="admin()" style="display: none;" class="w3-bar-item w3-button">ADMIN</a>
+          <a id="btn-user" href="/quanlyHoSoCaNhan.html" style="display: none;" class="w3-bar-item w3-button"></a>
         </div>
       </div>
-      
+      <a href="#" class="w3-padding-large w3-hover-red w3-hide-small w3-right">
+        <div>
+          <input id="search-input" type="text" placeholder="Tìm Kiếm.." name="txtTimKiem" id="txtTimKiem">
+          <button type="button" name="btnTimKiem" id="btnTimKiem" onclick="search(this)"><i class="fa fa-search"></i></button>
+        </div>
+      </a>
     </div>
   </div>
+
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->

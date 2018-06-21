@@ -19,10 +19,9 @@
   body {font-family: "Lato", sans-serif}
   .mySlides {display: none}
 </style>
-<body onload="loadProductsPage()">
+<body onload="loadSearchPage()">
 <div id="app">
 
-  <!-- Navbar -->
   <!-- Navbar -->
   <div class="w3-top">
     <div class="w3-bar w3-black w3-card">
@@ -55,28 +54,53 @@
       </a>
     </div>
   </div>
-  <div class="w3-content" style="max-width:2000px;margin-top:46px">
-        <table class="table" style="width:100%; font-size:130%;">
-       <center> <h3>LỊCH SỬ ĐẤU GIÁ SẢN PHẨM</h3></center></br>
-            <thead>
-              <tr>
-                <th>Mã Sản Phẩm</th>
-                <th>Tên Sản Phẩm</th>
-                <th>Mã Người Mua</th>
-                <th>Tên Người Mua</th>
-                <th>Lần Đấu Giá</th>
-                <th>Giá Đấu</th>
-              </tr>
-            </thead>
-            <tbody id="table">
-            </tbody>
-          </table>
-    </section>
+
+  <div id="nav" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+    <a href="#dienthoai" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ĐIỆN THOẠI</a>
+    <a href="#laptop" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">LAPTOP</a>
+    <a href="#maytinhbang" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MAYTINHBANG</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
   </div>
-    <div style="clear:both">
+
+  <div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:1000px" id="dienthoai">
+      <h2 class="w3-wide">Kết quả tìm kiếm</h2>
+      <div id="catalog_1" class="w3-row w3-padding-32"></div>
     </div>
 
-    <footer class="container">
-    </footer>
+    <!-- lien he -->
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="lienhe">
+      <h2 class="w3-wide w3-center">LIÊN HỆ</h2>
+      <p class="w3-opacity w3-center">HÃY LIÊN HỆ VỚI CHÚNG TÔI</p>
+      <div class="w3-row w3-padding-32">
+        <div class="w3-col m6 w3-large w3-margin-bottom">
+          <i class="fa fa-map-marker" style="width:30px"></i> ĐẤU GIÁ NHANH , VIỆT NAM<br>
+          <i class="fa fa-phone" style="width:30px"></i> Phone: +00560197<br>
+          <i class="fa fa-envelope" style="width:30px"> </i> Email: daugianhanh.com<br>
+        </div>
+        <div class="w3-col m6">
+          <form action="/action_page.php" target="_blank">
+            <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+              <div class="w3-half">
+                <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+              </div>
+              <div class="w3-half">
+                <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+              </div>
+            </div>
+            <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+            <button class="w3-button w3-black w3-section w3-right" type="submit">GỬI</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+</script>
+
 </body>
 </html>

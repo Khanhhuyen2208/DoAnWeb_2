@@ -7,6 +7,7 @@
     src="https://code.jquery.com/jquery-2.2.4.min.js"
     integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
     crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body onload="onLoad(); loadDetailPage()">
 <div>
@@ -34,10 +35,10 @@
         </div>
       </div>
       <a href="#" class="w3-padding-large w3-hover-red w3-hide-small w3-right">
-        <form action="#" name="formTimKiem" id="formTimKiem">
-          <!--<input type="text" placeholder="Tìm Kiếm.." name="txtTimKiem" id="txtTimKiem">-->
-          <button type="button" name="btnTimKiem" id="btnTimKiem"><i class="fa fa-search"></i></button>
-        </form>
+        <div>
+          <input id="search-input" type="text" placeholder="Tìm Kiếm.." name="txtTimKiem" id="txtTimKiem">
+          <button type="button" name="btnTimKiem" id="btnTimKiem" onclick="search(this)"><i class="fa fa-search"></i></button>
+        </div>
       </a>
     </div>
   </div>
