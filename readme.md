@@ -1,4 +1,4 @@
-# Đồ án lập trình web 2
+# Code2
 ## Thành viên:
 ----------------
 - 1560169: Phạm Thị Hậu
